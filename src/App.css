@@ -148,11 +148,10 @@ nav .wrapper {
 
 .nav-links li {
   list-style: none;
-
 }
 
 .nav-links li a {
-  color:#00000099;
+  color: #00000099;
   text-decoration: none;
   font-family: var(--nav-font);
   font-size: 16px;
@@ -186,7 +185,6 @@ nav .wrapper {
   margin-right: 10px;
   font-size: 22px;
 }
-
 
 .nav-links li:hover .drop-menu {
   transition: all 0.3s ease;
@@ -356,16 +354,16 @@ header {
 }
 /* contact css */
 
-.logo-sec img{
+.logo-sec img {
   height: 50px;
 }
 @keyframes scroll {
   0% {
     transform: translateX(0);
- }
+  }
   100% {
     transform: translateX(calc(-250px * 7));
- }
+  }
 }
 .slider {
   height: 100px;
@@ -374,7 +372,8 @@ header {
   position: relative;
   width: 100vw;
 }
-.slider::before, .slider::after {
+.slider::before,
+.slider::after {
   /* background: linear-gradient(to right, rgb(41, 69, 148) 0%, rgba(255, 255, 255, 0) 100%); */
   content: "";
   height: 100px;
@@ -400,10 +399,15 @@ header {
   height: 100px;
   width: 250px;
 }
+.slide img {
+  width: 7rem;
+  height: 5rem;
+  /* margin-left: 3rem; */
+}
 
 .contact-page-sec {
   padding: 10px 15px; /* Add padding for more space around the form */
-  background-image: url('./assets/img/contact.webp');
+  background-image: url("./assets/img/contact.webp");
   background-size: cover; /* Ensure the image covers the entire section */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Prevent the image from repeating */
@@ -415,7 +419,7 @@ header {
   background-color: #ffffff; /* Optional: Adding background color to the form */
   padding: 30px;
   border-radius: 8px;
-  box-shadow:  0 4px 15px 9px rgb(0 0 0);
+  box-shadow: 0 4px 15px 9px rgb(0 0 0);
 }
 
 .contact-page-form .row {
@@ -436,10 +440,9 @@ header {
   border-radius: 4px;
   margin-bottom: 20px;
   transition: border 0.3s ease; /* Adjust timing and easing as needed */
-
 }
 .contact-page-form input:hover,
-.contact-page-form textarea:hover{
+.contact-page-form textarea:hover {
   border: 1px solid var(--accent-color);
 }
 
@@ -455,14 +458,14 @@ header {
 }
 
 .contact-page-form .single-input-fieldsbtn input[type="submit"]:hover {
-  background:var(--accent-color);
+  background: var(--accent-color);
   transition: background 0.3s;
 }
-.taxt-center h1{
+.taxt-center h1 {
   font-size: 32px;
   font-weight: 900;
 }
-.ms-input-label.is-overlapping{
+.ms-input-label.is-overlapping {
   z-index: 3;
   background-color: #fff;
   border-radius: 5px;
@@ -470,17 +473,15 @@ header {
   align-items: center;
   padding-left: 6px;
   padding-right: 6px;
-  display: flex
-;
+  display: flex;
   position: absolute;
   top: 141px;
   left: 152px;
 }
-.is-overlapping span{
+.is-overlapping span {
   color: red;
   margin-left: 4px;
   font-size: 12px;
-
 }
 .contact-btn {
   background-color: var(--accent-color); /* Initial background color */
@@ -496,12 +497,9 @@ header {
   transition: all 0.3s ease-in-out; /* Smooth transition on hover */
 }
 
-
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-  
 }
-
 
 /* Responsive Design */
 @media screen and (max-width: 768px) {
@@ -509,7 +507,7 @@ header {
   .main {
     position: relative;
     top: 85px;
-}
+  }
   .contact-page-form {
     padding: 20px;
   }
@@ -593,7 +591,6 @@ header {
     position: relative;
     top: 5px;
     box-shadow: none;
-
   }
 
   .drop-menu li {
@@ -675,7 +672,6 @@ header {
 
   .content .row p {
     font-size: 13px;
-
   }
 
   .wrapper .logo img {
@@ -722,12 +718,10 @@ header {
   }
 
   /* footer css */
-
-
 }
 
 @media screen and (min-width: 320px) and (max-width: 479px) {
-  .main{
+  .main {
     position: relative;
     top: 61px;
   }
@@ -869,12 +863,10 @@ header {
   top: 4.8rem!important;
 } */
   .text-center p {
-
     font-size: 13px;
     font-weight: 500;
     padding: 0 15px;
   }
-
 }
 
 nav input {
@@ -898,7 +890,6 @@ nav input {
 
 /* dropdown */
 
-
 /* PHP Email Form Messages
 ------------------------------*/
 
@@ -907,8 +898,10 @@ nav input {
 .pulsating-play-btn {
   width: 94px;
   height: 94px;
-  background: radial-gradient(var(--accent-color) 50%,
-      color-mix(in srgb, var(--accent-color), transparent 75%) 52%);
+  background: radial-gradient(
+    var(--accent-color) 50%,
+    color-mix(in srgb, var(--accent-color), transparent 75%) 52%
+  );
   border-radius: 50%;
   display: block;
   position: relative;
@@ -1020,7 +1013,8 @@ nav input {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px color-mix(in srgb, var(--default-color), transparent 85%);
+  box-shadow: 0px 0 18px
+    color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
 /*--------------------------------------------------------------
@@ -1117,16 +1111,15 @@ nav input {
 }
 
 .footer-heading:after {
-  content: '';
+  content: "";
   width: 25px;
-  border-bottom: 1px solid #FFF;
+  border-bottom: 1px solid #fff;
   position: absolute;
   left: 0;
   bottom: 0;
   display: block;
   border-bottom: 1px solid #06c0ef;
 }
-
 
 /*--------------------------------------------------------------
 # Preloader
@@ -1221,9 +1214,11 @@ nav input {
 
 .page-title:before {
   content: "";
-  background-color: color-mix(in srgb,
-      var(--background-color),
-      transparent 50%);
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 50%
+  );
   position: absolute;
   inset: 0;
 }
@@ -1245,11 +1240,11 @@ nav input {
   font-weight: 400;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -1269,7 +1264,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 60px;
@@ -1351,8 +1345,6 @@ section,
   z-index: 2;
 }
 
-
-
 .hero h2 {
   margin-bottom: 30px;
   font-size: 48px;
@@ -1371,7 +1363,6 @@ section,
 }
 
 @media (min-width: 1024px) {
-
   .hero h2,
   .hero p {
     max-width: 60%;
@@ -1415,7 +1406,6 @@ section,
 }
 
 @media (min-width: 1024px) {
-
   .hero .carousel-control-prev,
   .hero .carousel-control-next {
     width: 5%;
@@ -1472,8 +1462,10 @@ section,
 .services .content .service-item {
   background-color: var(--surface-color);
   padding: 20px 30px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  border-left: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
+  border-left: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
   position: relative;
 }
 
@@ -1507,7 +1499,7 @@ section,
   display: none;
 }
 
-.services .content .service-item .service-item-icon>span {
+.services .content .service-item .service-item-icon > span {
   color: var(--default-color);
   font-size: 4rem;
 }
@@ -1524,22 +1516,26 @@ section,
 
 @media (min-width: 769px) {
   .services .content [class^="col-"]:nth-child(4n + 4) .service-item {
-    border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-right: 1px solid
+      color-mix(in srgb, var(--default-color), transparent 90%);
   }
 
   .services .content [class^="col-"]:nth-last-child(-n + 4) .service-item {
-    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--default-color), transparent 90%);
   }
 }
 
 @media (max-width: 768px) {
   .services .content [class^="col-"]:nth-child(2n + 2) .service-item {
-    border-right: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-right: 1px solid
+      color-mix(in srgb, var(--default-color), transparent 90%);
   }
 
   .services .content [class^="col-"]:last-child .service-item,
   .services .content [class^="col-"]:nth-last-child(2) .service-item {
-    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-bottom: 1px solid
+      color-mix(in srgb, var(--default-color), transparent 90%);
   }
 }
 
@@ -1626,9 +1622,11 @@ section,
 
 .services-2 .service-item:before {
   content: "";
-  background-color: color-mix(in srgb,
-      var(--background-color),
-      transparent 50%);
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 50%
+  );
   top: 0;
   left: 0;
   right: 0;
@@ -1727,9 +1725,11 @@ section,
   border-radius: 0;
   width: 20px;
   height: 4px;
-  background-color: color-mix(in srgb,
-      var(--background-color),
-      transparent 80%) !important;
+  background-color: color-mix(
+    in srgb,
+    var(--background-color),
+    transparent 80%
+  ) !important;
   opacity: 1;
 }
 
@@ -1994,7 +1994,7 @@ section,
   position: relative;
 }
 
-.team .person .social a>span {
+.team .person .social a > span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2005,8 +2005,6 @@ section,
   background: var(--accent-color);
   color: var(--contrast-color);
 }
-
-
 
 /*--------------------------------------------------------------
 # Widgets
@@ -2210,10 +2208,6 @@ section,
 .recent-posts-widget-2 .post-item:last-child {
   margin-bottom: 0;
 }
-
-
-
-
 
 .recent-posts-widget-2 .post-item h4 {
   font-size: 16px;
