@@ -393,6 +393,7 @@ header {
 .slider .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
+  gap: 50px;
   /* width: calc(250px * 14); */
 }
 .slider .slide {
@@ -400,8 +401,8 @@ header {
   width: 250px;
 }
 .slide img {
-  width: 7rem;
-  height: 5rem;
+  width: 7.5rem;
+  height: 6rem;
   /* margin-left: 3rem; */
 }
 
