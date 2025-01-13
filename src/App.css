@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satoshi:wght@200;300;400;500;600;700&display=swap");
 
 * {
   margin: 0;
@@ -19,15 +19,15 @@ main {
   --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Marcellus", sans-serif;
-  --nav-font: "Marcellus", sans-serif;
+  --heading-font: "Satoshi", sans-serif;
+  --nav-font: "Satoshi", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root {
   --background-color: #ffffff;
   /* Background color for the entire website, including individual sections */
-  --default-color: #212529;
+  --default-color: #333333c2;
   /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2d465e;
   /* Color for headings, subheadings and title throughout the website */
@@ -82,7 +82,7 @@ main {
 body {
   color: var(--default-color);
   background-color: var(--background-color);
-  font-family: var(--default-font);
+  font-family: var(--nav-font);
   height: 100%;
   margin: 0;
 }
@@ -151,10 +151,10 @@ nav .wrapper {
 }
 
 .nav-links li a {
-  color: #00000099;
+  color: #333333c2;
   text-decoration: none;
   font-family: var(--nav-font);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: bolder;
   /* padding: 9px 15px; */
   border-radius: 5px;
@@ -290,6 +290,8 @@ a {
   font-size: 16px;
   font-weight: 600;
   font-family: var(--nav-font);
+}
+.row header:hover {
   color: var(--accent-color);
 }
 
@@ -307,10 +309,9 @@ header {
 }
 
 .row .mega-links li a {
-  padding: 0px;
-  padding: 0 20px;
-  color: #494545;
-  font-size: 14px;
+  padding: 0 41px;
+  color: var(--default-color);
+  font-size: 13px;
   display: block;
 }
 
@@ -366,8 +367,8 @@ header {
   }
 }
 .slider {
-  height: 100px;
-  margin: auto;
+  height: 90px;
+  margin: 15px 0 0 0;
   overflow: hidden;
   position: relative;
   width: 100vw;
@@ -401,9 +402,12 @@ header {
   width: 250px;
 }
 .slide img {
-  width: 7.5rem;
-  height: 6rem;
+  width: 5.5rem;
+  height: 4rem;
   /* margin-left: 3rem; */
+}
+.logo-section {
+  box-shadow: inset 0 -6px 17px 0 rgb(0 12 24), 0px 4px 11px rgba(0, 0, 0, 4.2);
 }
 
 .contact-page-sec {
@@ -1023,8 +1027,8 @@ nav input {
 --------------------------------------------------------------*/
 .bg-footer {
   background-color: #33383c;
-  padding: 50px 0 30px;
-  font-family: var(--default-font);
+  padding: 30px 0 30px;
+  font-family: var(--nav-font);
 }
 
 .footer-heading {
@@ -1072,36 +1076,6 @@ nav input {
   margin: 15px 0 0 0;
 }
 
-.footer-social-icon {
-  font-size: 15px;
-  height: 34px;
-  width: 34px;
-  line-height: 34px;
-  border-radius: 3px;
-  text-align: center;
-  display: inline-block;
-}
-
-.facebook {
-  background-color: #4e71a8;
-  color: #ffffff;
-}
-
-.twitter {
-  background-color: #55acee;
-  color: #ffffff;
-}
-
-.google {
-  background-color: #d6492f;
-  color: #ffffff;
-}
-
-.apple {
-  background-color: #424041;
-  color: #ffffff;
-}
-
 .footer-alt {
   color: #acacac;
 }
@@ -1122,39 +1096,11 @@ nav input {
   border-bottom: 1px solid #06c0ef;
 }
 
-/*--------------------------------------------------------------
-# Preloader
---------------------------------------------------------------*/
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 999999;
-  overflow: hidden;
-  background: var(--background-color);
-  transition: all 0.6s ease-out;
+.clutch-details {
+  padding: 0 33px;
 }
-
-#preloader:before {
-  content: "";
-  position: fixed;
-  top: calc(50% - 30px);
-  left: calc(50% - 30px);
-  border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  animation: animate-preloader 1.5s linear infinite;
-}
-
-@keyframes animate-preloader {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+.goodfirm-widget {
+  padding: 0 18px;
 }
 
 /*--------------------------------------------------------------
@@ -1259,7 +1205,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 30px 0;
+  padding: 0px 15px;
   scroll-margin-top: 100px;
   overflow: clip;
 }
@@ -1293,7 +1239,7 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# Slider section Section
 --------------------------------------------------------------*/
 
 .main {
@@ -1304,128 +1250,6 @@ section,
 .slider_one img {
   height: 100vh;
   width: 100vw;
-}
-
-.hero {
-  padding: 0;
-}
-
-/* .hero .carousel {
-  width: 100%;
-  min-height: calc(100vh - 100px);
-  padding: 0;
-  margin: 0;
-  background-color: var(--background-color);
-  position: relative;
-} */
-
-.hero img {
-  position: absolute;
-  inset: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.hero .carousel-item {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  overflow: hidden;
-}
-
-.hero .carousel-item:before {
-  content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 60%);
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-}
-
-.hero h2 {
-  margin-bottom: 30px;
-  font-size: 48px;
-  font-weight: 700;
-  animation: fadeInDown 1s both;
-}
-
-@media (max-width: 768px) {
-  .hero h2 {
-    font-size: 30px;
-  }
-}
-
-.hero p {
-  animation: fadeInDown 1s both 0.2s;
-}
-
-@media (min-width: 1024px) {
-  .hero h2,
-  .hero p {
-    max-width: 60%;
-  }
-}
-
-.hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-family: var(--heading-font);
-  font-weight: 500;
-  font-size: 15px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 32px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin: 10px;
-  animation: fadeInUp 1s both 0.4s;
-}
-
-.hero .btn-get-started:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-.hero .carousel-control-prev,
-.hero .carousel-control-next {
-  width: 10%;
-  transition: 0.3s;
-  opacity: 0.5;
-}
-
-.hero .carousel-control-prev:focus,
-.hero .carousel-control-next:focus {
-  opacity: 0.5;
-}
-
-.hero .carousel-control-prev:hover,
-.hero .carousel-control-next:hover {
-  opacity: 0.9;
-}
-
-@media (min-width: 1024px) {
-  .hero .carousel-control-prev,
-  .hero .carousel-control-next {
-    width: 5%;
-  }
-}
-
-.hero .carousel-control-next-icon,
-.hero .carousel-control-prev-icon {
-  background: none;
-  font-size: 32px;
-  line-height: 1;
-}
-
-.hero .carousel-indicators {
-  list-style: none;
-}
-
-.hero .carousel-indicators li {
-  cursor: pointer;
 }
 
 @keyframes fadeInUp {
@@ -1550,26 +1374,24 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
+.about {
+  /* background: var(--accent-color); */
+  margin: 10px 0 10px 0;
+}
 .about .section-title {
   margin-bottom: 60px;
 }
 
-.about .content {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+/* .about .content {
+  /* color: var(--contrast-color); 
   padding: 7rem 0;
-}
+} */
 
 .about .content .img-overlap {
   margin-top: -150px;
 }
 
-.about p {
-  color: var(--contrast-color);
-}
-
 .about .content-title {
-  color: var(--contrast-color);
   font-weight: 300;
   text-align: left;
 }
@@ -1580,9 +1402,20 @@ section,
 
 .about .content-subtitle {
   font-weight: 300;
-  color: var(--contrast-color);
   text-transform: uppercase;
   font-size: 1.3rem;
+}
+.head-style {
+  position: relative; /* Position relative to apply the pseudo-element */
+}
+
+.head-style::after {
+  content: ""; /* Required for pseudo-element */
+  position: absolute;
+  bottom: 0; /* Position the border at the bottom of the span */
+  left: 0;
+  width: 100%; /* Make the border the same width as the span */
+  border-bottom: 3px solid var(--accent-color); /* Border styling */
 }
 
 /*--------------------------------------------------------------
