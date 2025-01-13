@@ -202,7 +202,7 @@ const Footer = () => {
 
                 <div className='clutch-details mt-4 text-center'>
                   <div
-                    class='clutch-widget'
+                    className='clutch-widget'
                     data-url='https://widget.clutch.co'
                     data-widget-type='14'
                     data-height='50'
@@ -212,7 +212,7 @@ const Footer = () => {
                     data-clutchcompany-id='2066120'></div>
                 </div>
                 <div
-                  class='goodfirm-widget'
+                  className='goodfirm-widget'
                   data-widget-type='goodfirms-widget-t8'
                   data-widget-pattern='poweredby-star'
                   data-height='60'

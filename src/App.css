@@ -353,6 +353,83 @@ header {
 .menu-btn {
   display: none;
 }
+
+/* about section nav tabs on home page css start */
+.cycle-tab-container {
+  margin: 30px auto;
+  width: 800px;
+  padding: 20px;
+  box-shadow: 0 0 10px 2px #ddd;
+  position: relative;
+}
+
+.cycle-tab-container a {
+  color: #173649;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  text-align: center;
+}
+
+.tab-pane {
+  text-align: center;
+  height: auto;
+  margin: 30px auto;
+  width: 500px;
+  max-width: 100%;
+}
+
+.cycle-tab-item {
+  width: 240px;
+  text-align: center;
+}
+
+.cycle-tab-item:after {
+  display: block;
+  content: "";
+  border-bottom: solid 3px var(--accent-color);
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in, border-color 0.3s ease-in;
+}
+
+.cycle-tab-item.active:after {
+  transform: scaleX(1);
+  transform-origin: 0% 50%;
+  transition: transform 0.5s ease-in;
+}
+
+.nav-link:focus,
+.nav-link:hover,
+.cycle-tab-item.active a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.fade.show {
+  opacity: 1;
+}
+.section-2 img {
+  position: relative;
+  width: 100% !important;
+  height: 203px !important;
+  opacity: 0.9;
+}
+.section-2 p {
+  z-index: 99;
+  position: relative;
+  bottom: 165px;
+  transform: scaleX(1);
+  transition: transform 0.5s ease-out;
+  color: var(--background-color);
+  ;
+}
+
+
+/* about section nav tabs on home page css End*/
 /* contact css */
 
 .logo-sec img {
@@ -1382,16 +1459,12 @@ section,
   margin-bottom: 60px;
 }
 
-/* .about .content {
-  /* color: var(--contrast-color); 
-  padding: 7rem 0;
-} */
-
 .about .content .img-overlap {
   margin-top: -150px;
 }
 
 .about .content-title {
+  margin: 30px auto;
   font-weight: 300;
   text-align: left;
 }
@@ -1400,10 +1473,14 @@ section,
   font-weight: 700;
 }
 
-.about .content-subtitle {
-  font-weight: 300;
+.content-subtitle {
+  font-weight: 600;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 40px;
+}
+.content-para {
+  font-size: 13px;
+  font-weight: 600;
 }
 .head-style {
   position: relative; /* Position relative to apply the pseudo-element */
