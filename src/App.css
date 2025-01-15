@@ -510,13 +510,13 @@ header {
   overflow: hidden;
 }
 
-.content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 4px 16px;
-}
+  /* .content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 4px 16px;
+  } */
 
 .text {
   font-size: 21px;
