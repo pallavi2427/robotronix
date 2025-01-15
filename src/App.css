@@ -329,7 +329,7 @@ header {
 
 .row p {
   position: relative;
-  margin: 15px 0 0 15px;
+  margin: 7px 0 12px 17px;
 }
 
 .wrapper .btn {
@@ -354,12 +354,13 @@ header {
   display: none;
 }
 
-/* about section nav tabs on home page css start */
+/* how can we help section nav tabs on home page css start */
 .cycle-tab-container {
-  margin: 30px auto;
-  width: 800px;
+  height: 390px;
+  margin: 0px auto;
+  width: 100%;
   padding: 20px;
-  box-shadow: 0 0 10px 2px #ddd;
+  box-shadow: 0 0 4px 0px #ddd;
   position: relative;
 }
 
@@ -373,8 +374,8 @@ header {
 .tab-pane {
   text-align: center;
   height: auto;
-  margin: 30px auto;
-  width: 500px;
+  /* margin: 10px auto; */
+  width: 100%;
   max-width: 100%;
 }
 
@@ -425,11 +426,157 @@ header {
   transform: scaleX(1);
   transition: transform 0.5s ease-out;
   color: var(--background-color);
-  ;
 }
 
+.tab-content-inner h4 {
+  background-color: #fff;
+  font-size: 20px;
+  width: 276px;
+  font-weight: 600;
+  position: relative;
+  left: 168px;
+  top: 31px;
+  border-radius: 8px;
+  color: #00baed;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 186, 237, 0.5); /* Initial glow */
+  border: 1px solid transparent; /* Transparent border for the animation */
+  animation: glowing-border 2s infinite;
+}
 
-/* about section nav tabs on home page css End*/
+/* Keyframes for glowing border effect */
+@keyframes glowing-border {
+  0% {
+    /* box-shadow: 0 0 0px rgba(0, 186, 237, 0.5), 0 0 20px rgba(0, 186, 237, 0.4); */
+    border-color: rgba(0, 186, 237, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(0, 186, 237, 0.7), 0 0 30px rgba(0, 186, 237, 0.6);
+    border-color: rgba(0, 186, 237, 1);
+  }
+  100% {
+    /* box-shadow: 0 0 10px rgba(0, 186, 237, 0.5), 0 0 20px rgba(0, 186, 237, 0.4); */
+    border-color: rgba(0, 186, 237, 0.7);
+  }
+}
+
+/* how can we help section nav tabs on home page css End*/
+
+/* cards section on home page start */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+:root {
+  --color-3: #f5f5f5;
+  --color-4: #242424;
+}
+
+.file-container {
+  --rotation: 0deg;
+  --border-color: #f5f5f5;
+  --hover-text-color: #f5f5f5;
+  width: 388px;
+  height: 378px;
+  border: 3px solid transparent;
+  border-radius: 1em;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  position: relative;
+  overflow: hidden;
+  padding: 14px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-container {
+  width: 354px;
+  height: 344px;
+  background-color: #282d3452;
+  border-radius: 1em;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  /* background: 
+        linear-gradient(45deg, rgba(230, 230, 230, 0.15) 25%, transparent 25%, transparent 75%, rgba(240, 240, 240, 0.15) 75%),
+        linear-gradient(-45deg, rgba(240, 240, 240, 0.15) 25%, transparent 25%, transparent 75%, rgba(230, 230, 230, 0.15) 75%); */
+  background-size: 20.84px 20.84px;
+}
+
+.image-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4px 16px;
+}
+
+.text {
+  font-size: 21px;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+  line-height: normal;
+  margin-bottom: 5px;
+  width: auto;
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  position: relative;
+  z-index: 10;
+  padding: 2px 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.text-effect {
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  transform-origin: center;
+  transition: all cubic-bezier(0.1, 0.5, 0.5, 1) 0.4s;
+  position: absolute;
+  left: -4px;
+  right: -4px;
+  top: -4px;
+  bottom: -4px;
+  z-index: 0;
+}
+
+.file-container:hover .text-effect {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.description {
+  font-size: 14px;
+  color: white;
+  display: -webkit-box;
+  /* -webkit-line-clamp: 3; */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-weight: 700;
+}
+
+.file-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* cards section on home page end */
+
 /* contact css */
 
 .logo-sec img {
@@ -484,7 +631,8 @@ header {
   /* margin-left: 3rem; */
 }
 .logo-section {
-  box-shadow: inset 0 -6px 17px 0 rgb(0 12 24), 0px 4px 11px rgba(0, 0, 0, 4.2);
+  /* box-shadow: inset 0 -6px 17px 0 rgb(0 12 24), 0px 4px 11px rgba(0, 0, 0, 4.2); */
+  box-shadow: inset 0 0px 0px 0 rgb(0 12 24), 0px 4px 11px rgba(0, 0, 0, 4.2);
 }
 
 .contact-page-sec {
@@ -1118,7 +1266,7 @@ nav input {
 
 .mean-section3 h1 {
   font-weight: bolder;
-    font-size: 45px;
+  font-size: 45px;
 }
 
 .mean-section3 button {
@@ -1147,9 +1295,7 @@ nav input {
   grid-template-columns: auto auto;
   gap: 40px 80px;
   margin-top: 50px;
-  
 }
-
 
 /* Flip-card css */
 /* FlipCard.css */
@@ -1190,7 +1336,7 @@ nav input {
   /* border: 1px solid #2d465e; */
   border-radius: 10px;
   text-align: center;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .flip-card-back {
@@ -1200,29 +1346,28 @@ nav input {
   padding: 5px 10px;
   overflow: hidden;
   transform: rotateY(180deg); /* Rotates the back side for the flip effect */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* section5 */
 
 .mean-section5 {
-  padding: 50px 20px ;
+  padding: 50px 20px;
 }
 
-.mean-section5 .hiring-image img{
+.mean-section5 .hiring-image img {
   width: 100%;
   height: 100%;
 }
 
-.mean-section5 .content h1{
+.mean-section5 .content h1 {
   margin-left: 15px;
 }
 
-.mean-section5 .content button{
+.mean-section5 .content button {
   margin-left: 12px;
   margin-top: 20px;
 }
-
 
 /* meandev css */
 
@@ -1639,10 +1784,12 @@ section,
   font-weight: 600;
   text-transform: uppercase;
   font-size: 40px;
+  margin: 90px 0 0;
 }
 .content-para {
   font-size: 13px;
   font-weight: 600;
+  margin:0 0 20px;
 }
 .head-style {
   position: relative; /* Position relative to apply the pseudo-element */
