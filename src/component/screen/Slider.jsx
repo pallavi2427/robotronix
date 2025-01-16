@@ -8,7 +8,7 @@ import logoSlider4 from "./../../assets/img/honda_logo1.png";
 import logoSlider5 from "./../../assets/img/pinnacle1.png";
 import logoSlider6 from "./../../assets/img/airport_authority_of_india1.png";
 import logoSlider7 from "./../../assets/img/mpidc_logo1.png";
-import wwd from "./../../assets/img/earth-the-world-earth-carbon-wallpaper-thumb.jpg";
+// import wwd from "./../../assets/img/earth-the-world-earth-carbon-wallpaper-thumb.jpg";
 import technical from "./../../assets/img/tech.jpg";
 import consult from "./../../assets/img/consult.jpg";
 import service from "./../../assets/img/service.jpg";
@@ -18,6 +18,8 @@ import ai from "./../../assets/img/ai.jpg";
 import wdevelopment from "./../../assets/img/web.jpg";
 import digital from "./../../assets/img/dm.jpg";
 import { NavLink } from "react-router-dom";
+import q1 from "./../../assets/img/q1.png"
+import q2 from "./../../assets/img/quote-removebg-preview.png"
 
 const Slider = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -284,7 +286,7 @@ const Slider = () => {
         {/* card End */}
         {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
         {/* How we can help you Section start */}
-        <div className='d-flex justify-content-center align-item-center mt-5'>
+        <div className='d-flex justify-content-center align-item-center'>
           {" "}
           <h2 className='opacity-50 content-subtitle'>How we can help you?</h2>
         </div>
@@ -348,9 +350,160 @@ const Slider = () => {
         {/*How we can help you Section end */}
 
         {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+        {/* Testimonial section start */}
+        <div className='d-flex justify-content-center align-item-center'>
+          {" "}
+          <h2 className='opacity-50 content-subtitle'>Testimonial</h2>
+        </div>
+        <div className='d-flex justify-content-center align-item-center'>
+          {" "}
+          <p className='content-para'>What our clients say about us.</p>
+        </div>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-12 d-flex justify-content-center align-item-center'>
+              <div className='testimonial-slider'>
+                <ul className='slider'>
+                  <li>
+                    <div className='testimonial-slider-content'>
+                      <p
+                        style={{
+                          position: "relative",
+                          textAlign: "center",
+                        }}>
+                        <img
+                          src={q2}
+                          alt='quote'
+                          style={{
+                            height: "30px",
+                            width: "30px",
+                            position: "relative",
+                            bottom: "15px",
+                          }}
+                        />
+                        This is the first quote in your slider!
+                        <img
+                          src={q1}
+                          alt='quote'
+                          style={{
+                            height: "30px",
+                            width: "30px",
+                            position: "relative",
+                            bottom: "15px",
+                          }}
+                        />
+                      </p>
+                      <p className='source'>- Paul C, TX</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className='testimonial-slider-content'>
+                      <p
+                        style={{
+                          position: "relative",
+                          textAlign: "center",
+                        }}>
+                        <img
+                          src={q2}
+                          alt='quote'
+                          style={{
+                            height: "30px",
+                            width: "30px",
+                            position: "relative",
+                            bottom: "15px",
+                          }}
+                        />
+                        This is the first quote in your slider!
+                        <img
+                          src={q1}
+                          alt='quote'
+                          style={{
+                            height: "30px",
+                            width: "30px",
+                            position: "relative",
+                            bottom: "15px",
+                          }}
+                        />
+                      </p>
+                      <p className='source'>- Paul C, TX</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className='testimonial-slider-content'>
+                      <p
+                        style={{
+                          position: "relative",
+                           textAlign: "center",
+                        }}>
+                        <img
+                          src={q2}
+                          alt='quote'
+                          style={{
+                            height: "30px",
+                            width: "30px",
+                            position: "relative",
+                            bottom: "15px",
+                          }}
+                        />
+                        This is the first quote in your slider!
+                        <img
+                          src={q1}
+                          alt='quote'
+                          style={{
+                            height: "30px",
+                            width: "30px",
+                            position: "relative",
+                            bottom: "15px",
+                          }}
+                        />
+                      </p>
+                      <p className='source'>- Paul C, TX</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div className='testimonial-slider-content'>
+                      <p
+                        style={{
+                          textAlign: "center",
+                        }}>
+                        <img
+                          src={q2}
+                          alt='quote'
+                          style={{
+                            height: "30px",
+                            width: "30px",
+                            position: "relative",
+                            bottom: "15px",
+                          }}
+                        />
+                        This is the first quote in your slider!
+                        <img
+                          src={q1}
+                          alt='quote'
+                          style={{
+                            height: "30px",
+                            width: "30px",
+                            position: "relative",
+                            bottom: "15px",
+                          }}
+                        />
+                      </p>
+                      <p className='source'>- Paul C, TX</p>
+                    </div>
+                  </li>
+                  
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Testimonial section end */}
+
+        {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
         {/* Logo section start*/}
-        <div className='d-flex justify-content-center align-item-center mt-5'>
+        <div className='d-flex justify-content-center align-item-center'>
           {" "}
           <h2 className='opacity-50 content-subtitle'>Our Clients</h2>
         </div>
