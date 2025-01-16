@@ -1,10 +1,10 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "../screen/Home";
-import MeanDev from "../screen/MeanDev";
+import MeanDev from "../screen/Web Development Sections/MeanDev";
 import About from "../screen/About";
-import NodeJsDev from "../screen/NodeJsDev";
-import ReactJsDev from "../screen/ReactJsDev";
+import NodeJsDev from "../screen/Web Development Sections/NodeJsDev";
+import ReactJsDev from "../screen/Web Development Sections/ReactJsDev";
 import PwaDev from "../screen/PwaDev";
 import AndriodAppDev from "../screen/AndriodAppDev";
 import FlutterAppDev from "../screen/FlutterAppDev";

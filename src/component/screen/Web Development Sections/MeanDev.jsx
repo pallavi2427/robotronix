@@ -1,9 +1,10 @@
-import SectionFront from "./SectionFront";
-import { Data } from "./Data";
-import InfoSection from "./InfoSection";
-import ExpertTalkSection from "./ExpertTalkSection";
-import TechStackSection from "./TechStackSection";
-import HiringSection from "./HiringSection";
+import SectionFront from "./Section Components/SectionFront";
+import { Data } from "./../Data";
+import InfoSection from "./Section Components/InfoSection"
+import ExpertTalkSection from "./Section Components/ExpertTalkSection";
+import TechStackSection from "./Section Components/TechStackSection"
+import HiringSection from "./Section Components/HiringSection"
+
 
 const MeanDev = () => {
   return (
