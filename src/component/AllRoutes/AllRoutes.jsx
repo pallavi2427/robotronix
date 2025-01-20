@@ -5,7 +5,7 @@ import MeanDev from "../screen/Web Development Sections/MeanDev";
 import About from "../screen/About";
 import NodeJsDev from "../screen/Web Development Sections/NodeJsDev";
 import ReactJsDev from "../screen/Web Development Sections/ReactJsDev";
-import PwaDev from "../screen/PwaDev";
+import PwaDev from "../screen/Web Development Sections/PwaDev";
 import AndriodAppDev from "../screen/AndriodAppDev";
 import FlutterAppDev from "../screen/FlutterAppDev";
 import IosAppDev from "../screen/IosAppDev";

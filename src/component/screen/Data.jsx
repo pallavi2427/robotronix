@@ -172,4 +172,64 @@ export const Data = {
       img: meanHiringImage,
     },
   },
+  pwaDev: {
+    sectionFront: {
+      title: "Progressive Web Application Development Company",
+      content:
+        "Building web applications with cutting-edge features that deliver a seamless experience, similar to native apps.",
+      img: meanLogo,
+    },
+    infoSection: {
+      title: "Enhanced Web Experiences with PWAs",
+      content:
+        "A Progressive Web App (PWA) is a cutting-edge web application that delivers a mobile-friendly experience without requiring downloads from an app store. Built with technologies like JavaScript, HTML, and CSS, PWAs offer excellent performance and user experience, comparable to native mobile apps.",
+    },
+    expertTalkSection: {
+      content:
+        "Robotronix is a forward-thinking web app development company dedicated to delivering top-tier solutions that drive higher ROI for your business. We focus on enhancing customer journeys and ensuring a smooth user experience. Our team can elevate your customer interactions by incorporating features such as push notifications, app-like interfaces, and seamless offline functionality into our scalable applications.",
+    },
+    techStackSection: {
+      title: "Boosting Business with PWAs",
+      content:
+        "Progressive Web Applications (PWAs) require no installation time. On the user's second visit, they are prompted to install the app, with key elements cached for faster performance and immediate responsiveness.",
+      cardData: [
+        {
+          heading: "Smaller size",
+          content:
+            "Progressive Web Applications leverage browser capabilities, offering a wide range of features in a more compact size compared to native apps.",
+        },
+        {
+          heading: "All platforms at once",
+          content:
+            "PWAs are platform-independent, offering full functionality across smartphones, PCs, tablets, and other devices running Android, iOS, and more. Users can access them without the need to search, download, or install from app stores.",
+        },
+        {
+          heading: "Better service",
+          content:
+            "Even if users choose not to download the app, they can still access its features, such as pop-ups and offline functionality. This technology simplifies the user experience by minimizing the steps needed to interact with the app.",
+        },
+        {
+          heading: "Be the pioneer",
+          content:
+            "As time passes, more companies will adopt custom-built progressive apps, and users will grow accustomed to them. Falling behind in this trend could leave you at a competitive disadvantage, as innovative technologies like PWAs lose their disruptive edge.",
+        },
+        {
+          heading: "Offline access",
+          content:
+            "PWA service workers allow users to access websites offline by storing cached data, enabling the loading of frequently visited sites even without an internet connection.",
+        },
+        {
+          heading: "Native like feel",
+          content:
+            "Unlike native apps, PWAs don't require downloads, saving device storage. Despite this, they provide a user experience similar to that of native apps.",
+        },
+      ],
+    },
+    hiringSection: {
+      title: "Recruit expert developers for Progressive Web Apps.",
+      content:
+        "At Robotronix, we provide exceptional Progressive Web App development services, ensuring fast delivery and maximum ROI. Our team of skilled designers, with expertise in both web and mobile app development, is committed to delivering cutting-edge, innovative solutions. As a top-tier provider of PWAs, we guarantee custom, creative solutions tailored to your unique needs.",
+      img: meanHiringImage,
+    },
+  },
 };
