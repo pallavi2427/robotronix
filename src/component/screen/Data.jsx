@@ -232,4 +232,52 @@ export const Data = {
       img: meanHiringImage,
     },
   },
+  androidAppDev: {
+    sectionFront: {
+      title: "Android app development company",
+      content:
+        "Develop premium Android apps featuring exceptional UI/UX design and robust security.",
+      img: meanLogo,
+    },
+    infoSection: {
+      title: "Android Apps for Business Excellence",
+      content:
+        "Our developers build Android apps using the latest tools and technologies, including Android SDK in a test-driven setting. We utilize Material Design, Java, Jetpack for Digital Wellbeing, dynamic backends, and custom APIs to deliver high-quality solutions.",
+    },
+    expertTalkSection: {
+      content:
+        "We assist businesses in maximizing ROI by developing innovative, user-friendly mobile apps with a strong visual appeal.",
+    },
+    techStackSection: {
+      title: "We bring your app ideas to life.",
+      content:
+        "We develop tailored apps from the ground up, leveraging the key features that make Android the leading mobile platform worldwide.",
+      cardData: [
+        {
+          heading: "Card 1",
+          content:
+            "Data 1.",
+        },{
+          heading: "Card 2",
+          content:
+            "Data 2.",
+        },{
+          heading: "Card 3",
+          content:
+            "Data 3.",
+        },{
+          heading: "Card 4",
+          content:
+            "Data 4.",
+        }
+        
+      ],
+    },
+    hiringSection: {
+      title: "Hire android app developers from Robotronix",
+      content:
+        "Our team consists of expert Android app developers known for delivering premium solutions. With our experience and skill, we are dedicated to helping your business grow and thrive.",
+      img: meanHiringImage,
+    },
+  }
 };
