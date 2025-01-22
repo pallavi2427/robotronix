@@ -279,5 +279,117 @@ export const Data = {
         "Our team consists of expert Android app developers known for delivering premium solutions. With our experience and skill, we are dedicated to helping your business grow and thrive.",
       img: meanHiringImage,
     },
-  }
+  },
+  flutterAppDev: {
+    sectionFront: {
+      title: "Flutter app development company",
+      content:
+        "Develop cross-platform apps with engaging animations and a visually appealing user interface.",
+      img: meanLogo,
+    },
+    infoSection: {
+      title: "Flutter: A Framework for Cross-Platform App Development",
+      content:
+        "Flutter allows you to control every pixel to create a tailored and responsive UI/UX that delivers a seamless experience across all screen types. It enables the development, testing, and deployment of high-quality mobile, web, desktop, and embedded applications using a single codebase. The Flutter experts at Softude have a strong track record of building user-centric applications, customized to meet specific business requirements.",
+    },
+    expertTalkSection: {
+      content:
+        "We follow a thorough approach to develop high-quality web and mobile applications that are fully optimized for business use.",
+    },
+    techStackSection: {
+      title: "Benefits of Flutter App Development",
+      content:
+        "Flutter is an app development framework that balances efficiency and quality. Mobile applications built with Flutter offer several benefits and enhance the overall development process.",
+      cardData: [
+        {
+          heading: "Hot reload",
+          content:
+            "Flutter's SDK provides a complete set of customizable widgets, testing tools, and integration APIs, enabling you to quickly design UIs, add features, and fix issues in minutes.",
+        },{
+          heading: "Expressive designs",
+          content:
+            "Flutter's motion APIs, smooth scrolling, elegant design, and Cupertino widgets support the development of fast-rendering, user-centric experiences for customer-facing applications.",
+        },{
+          heading: "Native performance",
+          content:
+            "Achieve a native-like experience on both iOS and Android with Flutter by addressing key platform differences, including scrolling, navigation, icons, and fonts.",
+        },{
+          heading: "Cross-platform",
+          content:
+            "Flutter is an open-source framework that utilizes a single codebase, along with the same libraries and renderer, across both platforms.",
+        },{
+          heading: "Functional as well as reactive",
+          content:
+            "Flutter offers a variety of beautiful layouts and versatile APIs, allowing designers to craft impressive visuals and dynamic animations.",
+        },{
+          heading: "Compatibility",
+          content:
+            "Flutter integrates smoothly with Swift and Objective-C, reducing the need to write app code from the ground up.",
+        }
+        
+      ],
+    },
+    hiringSection: {
+      title: "Hire Skilled Flutter Developers at Competitive Rates",
+      content:
+        "To build top-notch mobile applications that function seamlessly across platforms, businesses require expert developers who can deliver exceptional native-like experiences. Our team of skilled Flutter developers is equipped to create feature-packed, scalable mobile apps tailored to meet your business needs.  ",
+      img: meanHiringImage,
+    },
+  },
+  iosAppDev: {
+    sectionFront: {
+      title: "IOS application development company",
+      content:
+        "Develop cross-platform apps with engaging animations and a visually appealing user interface.",
+      img: meanLogo,
+    },
+    infoSection: {
+      title: "Flutter: A Framework for Cross-Platform App Development",
+      content:
+        "Flutter allows you to control every pixel to create a tailored and responsive UI/UX that delivers a seamless experience across all screen types. It enables the development, testing, and deployment of high-quality mobile, web, desktop, and embedded applications using a single codebase. The Flutter experts at Softude have a strong track record of building user-centric applications, customized to meet specific business requirements.",
+    },
+    expertTalkSection: {
+      content:
+        "We follow a thorough approach to develop high-quality web and mobile applications that are fully optimized for business use.",
+    },
+    techStackSection: {
+      title: "Benefits of Flutter App Development",
+      content:
+        "Flutter is an app development framework that balances efficiency and quality. Mobile applications built with Flutter offer several benefits and enhance the overall development process.",
+      cardData: [
+        {
+          heading: "Hot reload",
+          content:
+            "Flutter's SDK provides a complete set of customizable widgets, testing tools, and integration APIs, enabling you to quickly design UIs, add features, and fix issues in minutes.",
+        },{
+          heading: "Expressive designs",
+          content:
+            "Flutter's motion APIs, smooth scrolling, elegant design, and Cupertino widgets support the development of fast-rendering, user-centric experiences for customer-facing applications.",
+        },{
+          heading: "Native performance",
+          content:
+            "Achieve a native-like experience on both iOS and Android with Flutter by addressing key platform differences, including scrolling, navigation, icons, and fonts.",
+        },{
+          heading: "Cross-platform",
+          content:
+            "Flutter is an open-source framework that utilizes a single codebase, along with the same libraries and renderer, across both platforms.",
+        },{
+          heading: "Functional as well as reactive",
+          content:
+            "Flutter offers a variety of beautiful layouts and versatile APIs, allowing designers to craft impressive visuals and dynamic animations.",
+        },{
+          heading: "Compatibility",
+          content:
+            "Flutter integrates smoothly with Swift and Objective-C, reducing the need to write app code from the ground up.",
+        }
+        
+      ],
+    },
+    hiringSection: {
+      title: "Hire Skilled Flutter Developers at Competitive Rates",
+      content:
+        "To build top-notch mobile applications that function seamlessly across platforms, businesses require expert developers who can deliver exceptional native-like experiences. Our team of skilled Flutter developers is equipped to create feature-packed, scalable mobile apps tailored to meet your business needs.  ",
+      img: meanHiringImage,
+    },
+  },
 };
