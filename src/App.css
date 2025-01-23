@@ -1669,6 +1669,54 @@ nav input {
 
 /* meandev css */
 
+/*IOS Dev Css */
+.first-section{
+  height: 60%;
+}
+.first-section .bg-img {
+  padding: 0px;
+}
+.first-section .bg-img img {
+  width: 100%;
+  height: 600px;
+  }
+.first-section .content-box{
+  width: 80%;
+  height: 40%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  bottom: 250px;
+  left: 11%;
+  background-color: white;
+  box-shadow: 1px 1px 4px black;
+  border-radius: 10px;
+}
+.first-section .content-box .content-box-img {
+  padding: 0px;
+}
+.first-section .content-box .content {
+  padding: 0px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+  text-align: center;
+}
+.first-section .content-box .content h1 {
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.first-section .content-box .content-box-img img {
+  border-radius: 0px 10px 10px 0px;
+}
+
+
+/*IOS Dev Css */
+
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
