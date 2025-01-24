@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect ,useRef} from "react";
 import slider_1 from "./../../assets/img/Robotics-BG.jpg";
 import slider_2 from "./../../assets/img/robotics.webp";
 import logoSlider from "./../../assets/img/force_logo_c11.png";
@@ -18,12 +18,97 @@ import ai from "./../../assets/img/ai.jpg";
 import wdevelopment from "./../../assets/img/web.jpg";
 import digital from "./../../assets/img/dm.jpg";
 import { NavLink } from "react-router-dom";
-import q1 from "./../../assets/img/q1.png";
-import q2 from "./../../assets/img/quote-removebg-preview.png";
+// import q1 from "./../../assets/img/q1.png";
+// import q2 from "./../../assets/img/quote-removebg-preview.png";
 
 const Slider = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [activeIndex, setActiveIndex] = useState(0);
+  // test
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const testimSpeed = 4500;
+  const ignoreTouch = 30;
+  const slideTimer = useRef(null);
+  const touchStartPos = useRef(null);
+
+  const testimonials = [
+    {
+      imgSrc: "data:image/jpeg;base64",
+      name: "Lorem P. Ipsum",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    },
+    {
+      imgSrc: "data:image/jpeg;base64",
+      name: "Mr. Lorem Ipsum",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    },
+    {
+      imgSrc: "data:image/jpeg;base64",
+      name: "Lorem Ipsum",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    },
+    {
+      imgSrc: "data:image/jpeg;base64",
+      name: "Lorem De Ipsum",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    },
+    {
+      imgSrc: "data:image/jpeg;base64",
+      name: "Ms. Lorem R. Ipsum",
+      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
+    },
+  ];
+
+  const totalSlides = testimonials.length;
+
+  const playSlide = (slide) => {
+    if (slide < 0) slide = totalSlides - 1;
+    if (slide >= totalSlides) slide = 0;
+
+    setCurrentSlide(slide);
+  };
+
+  const nextSlide = () => playSlide(currentSlide + 1);
+  const prevSlide = () => playSlide(currentSlide - 1);
+
+  const restartTimer = () => {
+    if (slideTimer.current) clearTimeout(slideTimer.current);
+    slideTimer.current = setTimeout(nextSlide, testimSpeed);
+  };
+
+  useEffect(() => {
+    if (isPlaying) restartTimer();
+
+    return () => {
+      if (slideTimer.current) clearTimeout(slideTimer.current);
+    };
+  }, [currentSlide, isPlaying]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyUp = (e) => {
+      if (e.keyCode === 37) prevSlide(); // Left arrow
+      if (e.keyCode === 39) nextSlide(); // Right arrow
+    };
+    document.addEventListener("keyup", handleKeyUp);
+
+    return () => document.removeEventListener("keyup", handleKeyUp);
+  }, []);
+
+  // Touch navigation
+  const handleTouchStart = (e) => {
+    touchStartPos.current = e.changedTouches[0].clientX;
+  };
+
+  const handleTouchEnd = (e) => {
+    const touchEndPos = e.changedTouches[0].clientX;
+    const touchDiff = touchStartPos.current - touchEndPos;
+
+    if (touchDiff > ignoreTouch) nextSlide();
+    else if (touchDiff < -ignoreTouch) prevSlide();
+  };
+  // test
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -200,33 +285,9 @@ const Slider = () => {
       hoverTextColor: "#242424",
     },
   ];
-  const testimonials = [
-    {
-      text: "This is the best no-code platform I've ever seen",
-      author: "Alyssa Morris",
-      title: "Product Manager, Intel",
-      image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2261&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      text: "The perfect organizer and team builder",
-      author: "Randall Howard",
-      title: "UX Designer, Netflix",
-      image:
-        "https://images.unsplash.com/photo-1504199367641-aba8151af406?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-    {
-      text: "Flexible product with near endless possibilities",
-      author: "Adam Worrell",
-      title: "Data Analyst, Spotify",
-      image:
-        "https://images.unsplash.com/photo-1512485694743-9c9538b4e6e0?q=80&w=2487&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    },
-  ];
+ 
 
-  const scrollTo = (index) => {
-    setActiveIndex(index);
-  };
+ 
 
   useEffect(() => {
     // Animation initialization logic
@@ -404,174 +465,7 @@ const Slider = () => {
           {" "}
           <p className="content-para">What our clients say about us.</p>
         </div>
-        <div className="reviews">
-          
-          <div>
-            <div className="reviews-row row-first">
-              <div className="reviews-card">
-                <img
-                  className="card-img"
-                  src="https://temalcode-agency-portfolio.netlify.app/images/review1.png"
-                  alt=""
-                />
-                <div className="card-text">
-                  <div className="card-title">
-                    <p>“Excellent Team with Creative Mindset”</p>
-                  </div>
-                  <div className="card-para">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ornare eu odio pretium sed amet, pulvinar nunc fringilla
-                      lectus.
-                    </p>
-                    <p>
-                      Adipiscing gravida rhoncus nunc, massa id. Et vestibulum
-                      scelerisque morbi porttitor sapien. Feugiat faucibus
-                      gravida sed adipiscing odio. Condimentum purus varius non{" "}
-                    </p>
-                  </div>
-                  <div className="card-author">
-                    <svg
-                      width={9}
-                      height={2}
-                      viewBox="0 0 9 2"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.526123 1.13867H8.25949"
-                        stroke="black"
-                        strokeWidth="0.822209"
-                      />
-                    </svg>
-                    <p>CEO of SomeCompany</p>
-                  </div>
-                </div>
-              </div>
-              <div className="reviews-card">
-                <img
-                  className="card-img"
-                  src="https://temalcode-agency-portfolio.netlify.app/images/review2.png"
-                  alt=""
-                />
-                <div className="card-text">
-                  <div className="card-title">
-                    <p>“Excellent Team with Creative Mindset”</p>
-                  </div>
-                  <div className="card-para">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ornare eu odio pretium sed amet, pulvinar nunc fringilla
-                      lectus.
-                    </p>
-                    <p>
-                      Adipiscing gravida rhoncus nunc, massa id. Et vestibulum
-                      scelerisque morbi porttitor sapien. Feugiat faucibus
-                      gravida sed adipiscing odio. Condimentum purus varius non{" "}
-                    </p>
-                  </div>
-                  <div className="card-author">
-                    <svg
-                      width={9}
-                      height={2}
-                      viewBox="0 0 9 2"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.526123 1.13867H8.25949"
-                        stroke="black"
-                        strokeWidth="0.822209"
-                      />
-                    </svg>
-                    <p>CEO of SomeCompany</p>
-                  </div>
-                </div>
-              </div>
-              <div className="reviews-card">
-                <img
-                  className="card-img"
-                  src="https://temalcode-agency-portfolio.netlify.app/images/review3.png"
-                  alt=""
-                />
-                <div className="card-text">
-                  <div className="card-title">
-                    <p>“Excellent Team with Creative Mindset”</p>
-                  </div>
-                  <div className="card-para">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ornare eu odio pretium sed amet, pulvinar nunc fringilla
-                      lectus.
-                    </p>
-                    <p>
-                      Adipiscing gravida rhoncus nunc, massa id. Et vestibulum
-                      scelerisque morbi porttitor sapien. Feugiat faucibus
-                      gravida sed adipiscing odio. Condimentum purus varius non{" "}
-                    </p>
-                  </div>
-                  <div className="card-author">
-                    <svg
-                      width={9}
-                      height={2}
-                      viewBox="0 0 9 2"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.526123 1.13867H8.25949"
-                        stroke="black"
-                        strokeWidth="0.822209"
-                      />
-                    </svg>
-                    <p>CEO of SomeCompany</p>
-                  </div>
-                </div>
-              </div>
-              <div className="reviews-card">
-                <img
-                  className="card-img"
-                  src="https://temalcode-agency-portfolio.netlify.app/images/review1.png"
-                  alt=""
-                />
-                <div className="card-text">
-                  <div className="card-title">
-                    <p>“Excellent Team with Creative Mindset”</p>
-                  </div>
-                  <div className="card-para">
-                    <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Ornare eu odio pretium sed amet, pulvinar nunc fringilla
-                      lectus.
-                    </p>
-                    <p>
-                      Adipiscing gravida rhoncus nunc, massa id. Et vestibulum
-                      scelerisque morbi porttitor sapien. Feugiat faucibus
-                      gravida sed adipiscing odio. Condimentum purus varius non{" "}
-                    </p>
-                  </div>
-                  <div className="card-author">
-                    <svg
-                      width={9}
-                      height={2}
-                      viewBox="0 0 9 2"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M0.526123 1.13867H8.25949"
-                        stroke="black"
-                        strokeWidth="0.822209"
-                      />
-                    </svg>
-                    <p>CEO of SomeCompany</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      
         {/* Testimonial section end */}
 
         {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
