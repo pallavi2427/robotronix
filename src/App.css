@@ -1603,7 +1603,7 @@ nav input {
   width: 100%;
   text-align: center;
   position: relative;
-  bottom: 210px;
+  bottom: 190px;
 }
 .web-dev .second-section h1 {
   font-weight: bold;
@@ -1613,7 +1613,11 @@ nav input {
 }
 
 .web-dev .second-section .services-cards-section {
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  gap: 40px 20px;
+  margin-top: 50px;
 }
 .web-dev .second-section .services-cards-section .service-card {
   height: 380px;
