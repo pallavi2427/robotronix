@@ -1546,6 +1546,122 @@ nav input {
 
 /* meandev css */
 
+/*IOS Dev Css */
+
+/* First Section */
+.web-dev .first-section{
+  height: 60%;
+}
+.web-dev .first-section .bg-img {
+  padding: 0px;
+}
+.web-dev .first-section .bg-img img {
+  width: 100%;
+  height: 600px;
+  }
+.web-dev .first-section .content-box{
+  width: 80%;
+  height: 40%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  bottom: 250px;
+  left: 11%;
+  background-color: white;
+  box-shadow: 1px 1px 4px black;
+  border-radius: 10px;
+}
+.web-dev .first-section .content-box .content-box-img {
+  padding: 0px;
+}
+.web-dev .first-section .content-box .content {
+  padding: 0px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+  text-align: center;
+}
+.web-dev .first-section .content-box .content h1 {
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.web-dev .first-section .content-box .content-box-img img {
+  border-radius: 0px 10px 10px 0px;
+}
+
+/* First Section */
+
+/* Second Section */
+.web-dev .second-section *{
+  margin: 0px;
+  padding: 0px;
+}
+.web-dev .second-section {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 210px;
+}
+.web-dev .second-section h1 {
+  font-weight: bold;
+} 
+.web-dev .second-section p {
+  margin-top: 20px;
+}
+
+.web-dev .second-section .services-cards-section {
+  margin-top: 20px;
+}
+.web-dev .second-section .services-cards-section .service-card {
+  height: 380px;
+  width: 320px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+  padding: 15px 15px;
+  text-align: left;
+  background-color: white; 
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease; 
+}
+/* Hover Effect */
+.web-dev .second-section .services-cards-section .service-card:hover {
+  transform: scale(1.05); /* Slightly increase the size */
+  /* background-color: #6c93b9; */
+  color: black; /* Change text color to black */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.web-dev .second-section .services-cards-section .service-card h3 {
+  font-weight: bold;
+  margin-top: 15px;
+}
+/* Icon Box Styling */
+.web-dev .second-section .services-cards-section .service-card .ecommerce-logo {
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Default box-shadow for icon */
+  border-radius: 20%;
+  width: 65px;
+  height: 60px;
+  transition: box-shadow 0.3s ease; /* Smooth transition for box-shadow */
+}
+
+/* Icon Box Shadow on Hover */
+.web-dev .second-section .services-cards-section .service-card:hover .ecommerce-logo {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* More prominent and smooth shadow on hover */
+}
+.web-dev .second-section .services-cards-section .service-card .ecommerce-logo img {
+  height: 50px;
+  width: 50px;
+  margin-top: 5px;
+  margin-left: 4px;
+}
+
+/* Second Section */
+
+/*IOS Dev Css */
+
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
