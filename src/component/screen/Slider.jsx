@@ -1,4 +1,4 @@
-import React, { useState, useEffect ,useRef} from "react";
+import React, { useState } from "react";
 import slider_1 from "./../../assets/img/Robotics-BG.jpg";
 import slider_2 from "./../../assets/img/robotics.webp";
 import logoSlider from "./../../assets/img/force_logo_c11.png";
@@ -8,107 +8,29 @@ import logoSlider4 from "./../../assets/img/honda_logo1.png";
 import logoSlider5 from "./../../assets/img/pinnacle1.png";
 import logoSlider6 from "./../../assets/img/airport_authority_of_india1.png";
 import logoSlider7 from "./../../assets/img/mpidc_logo1.png";
-// import wwd from "./../../assets/img/earth-the-world-earth-carbon-wallpaper-thumb.jpg";
 import technical from "./../../assets/img/tech.jpg";
 import consult from "./../../assets/img/consult.jpg";
 import service from "./../../assets/img/service.jpg";
 import cyber from "./../../assets/img/cyber-security.jpg";
 import dataAnalysis from "./../../assets/img/analytics.jpg";
 import ai from "./../../assets/img/ai.jpg";
+import client1 from "./../../assets/img/testimonials/testimonials-1.jpg";
+import client2 from "./../../assets/img/testimonials/testimonials-2.jpg";
+import client3 from "./../../assets/img/testimonials/testimonials-3.jpg";
+import client4 from "./../../assets/img/testimonials/testimonials-4.jpg";
 import wdevelopment from "./../../assets/img/web.jpg";
 import digital from "./../../assets/img/dm.jpg";
 import { NavLink } from "react-router-dom";
-// import q1 from "./../../assets/img/q1.png";
-// import q2 from "./../../assets/img/quote-removebg-preview.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+// import required modules
+import { Pagination, Autoplay } from "swiper/modules";
 
 const Slider = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(0);
-  // test
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const testimSpeed = 4500;
-  const ignoreTouch = 30;
-  const slideTimer = useRef(null);
-  const touchStartPos = useRef(null);
-
-  const testimonials = [
-    {
-      imgSrc: "data:image/jpeg;base64",
-      name: "Lorem P. Ipsum",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    },
-    {
-      imgSrc: "data:image/jpeg;base64",
-      name: "Mr. Lorem Ipsum",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    },
-    {
-      imgSrc: "data:image/jpeg;base64",
-      name: "Lorem Ipsum",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    },
-    {
-      imgSrc: "data:image/jpeg;base64",
-      name: "Lorem De Ipsum",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    },
-    {
-      imgSrc: "data:image/jpeg;base64",
-      name: "Ms. Lorem R. Ipsum",
-      text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit...",
-    },
-  ];
-
-  const totalSlides = testimonials.length;
-
-  const playSlide = (slide) => {
-    if (slide < 0) slide = totalSlides - 1;
-    if (slide >= totalSlides) slide = 0;
-
-    setCurrentSlide(slide);
-  };
-
-  const nextSlide = () => playSlide(currentSlide + 1);
-  const prevSlide = () => playSlide(currentSlide - 1);
-
-  const restartTimer = () => {
-    if (slideTimer.current) clearTimeout(slideTimer.current);
-    slideTimer.current = setTimeout(nextSlide, testimSpeed);
-  };
-
-  useEffect(() => {
-    if (isPlaying) restartTimer();
-
-    return () => {
-      if (slideTimer.current) clearTimeout(slideTimer.current);
-    };
-  }, [currentSlide, isPlaying]);
-
-  // Keyboard navigation
-  useEffect(() => {
-    const handleKeyUp = (e) => {
-      if (e.keyCode === 37) prevSlide(); // Left arrow
-      if (e.keyCode === 39) nextSlide(); // Right arrow
-    };
-    document.addEventListener("keyup", handleKeyUp);
-
-    return () => document.removeEventListener("keyup", handleKeyUp);
-  }, []);
-
-  // Touch navigation
-  const handleTouchStart = (e) => {
-    touchStartPos.current = e.changedTouches[0].clientX;
-  };
-
-  const handleTouchEnd = (e) => {
-    const touchEndPos = e.changedTouches[0].clientX;
-    const touchDiff = touchStartPos.current - touchEndPos;
-
-    if (touchDiff > ignoreTouch) nextSlide();
-    else if (touchDiff < -ignoreTouch) prevSlide();
-  };
-  // test
 
   const handleTabClick = (index) => {
     setActiveTab(index);
@@ -285,15 +207,6 @@ const Slider = () => {
       hoverTextColor: "#242424",
     },
   ];
- 
-
- 
-
-  useEffect(() => {
-    // Animation initialization logic
-    const slider = document.querySelector(".slider");
-    slider.style.transform = `translateX(${-activeIndex * 100}%)`;
-  }, [activeIndex]);
 
   return (
     <>
@@ -343,7 +256,6 @@ const Slider = () => {
         {/* /Slider Section End */}
         {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
         {/* card start */}
-
         <div className="container">
           <div className="d-flex justify-content-center align-item-center">
             <h2 className="opacity-50 content-subtitle">What We Do</h2>
@@ -384,7 +296,6 @@ const Slider = () => {
             ))}
           </div>
         </div>
-
         {/* card End */}
         {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
         {/* How we can help you Section start */}
@@ -454,7 +365,6 @@ const Slider = () => {
           </div>
         </div>
         {/*How we can help you Section end */}
-
         {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
         {/* Testimonial section start */}
         <div className="d-flex justify-content-center align-item-center">
@@ -465,7 +375,224 @@ const Slider = () => {
           {" "}
           <p className="content-para">What our clients say about us.</p>
         </div>
-      
+        <div className="container">
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // }}
+            modules={[Pagination, Autoplay]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              {/* section start */}
+
+              <div className="swiper-client-msg">
+                <p>
+                  The href attribute requires a valid value to be accessible.
+                  Provide a valid, navigable address as the href value. If you
+                  cannot provide a valid href.
+                </p>
+              </div>
+              <div className="swiper-client-data row">
+                <div className="col-lg-6">
+                  <figure>
+                    <img src={client1} alt="client review"></img>
+                  </figure>
+                </div>
+                <div className="col-lg-6">
+                  <div className="clien-data-details">
+                    <p>Richie Rich</p>
+                    <p>Enterpreneur</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            {/* section end */}
+            <SwiperSlide>
+              <div className="swiper-client-msg">
+                <p>
+                  The href attribute requires a valid value to be accessible.
+                  Provide a valid, navigable address as the href value. If you
+                  cannot provide a valid href.
+                </p>
+              </div>
+              <div className="swiper-client-data row">
+                <div className="col-lg-6">
+                  <figure>
+                    <img src={client2} alt="client review"></img>
+                  </figure>
+                </div>
+                <div className="col-lg-6">
+                  <div className="clien-data-details">
+                    <p>Richie Rich</p>
+                    <p>Enterpreneur</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-client-msg">
+                <p>
+                  The href attribute requires a valid value to be accessible.
+                  Provide a valid, navigable address as the href value. If you
+                  cannot provide a valid href.
+                </p>
+              </div>
+              <div className="swiper-client-data row">
+                <div className="col-lg-6">
+                  <figure>
+                    <img src={client3} alt="client review"></img>
+                  </figure>
+                </div>
+                <div className="col-lg-6">
+                  <div className="clien-data-details">
+                    <p>Richie Rich</p>
+                    <p>Enterpreneur</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-client-msg">
+                <p>
+                  The href attribute requires a valid value to be accessible.
+                  Provide a valid, navigable address as the href value. If you
+                  cannot provide a valid href.
+                </p>
+              </div>
+              <div className="swiper-client-data row">
+                <div className="col-lg-6">
+                  <figure>
+                    <img src={client4} alt="client review"></img>
+                  </figure>
+                </div>
+                <div className="col-lg-6">
+                  <div className="clien-data-details">
+                    <p>Richie Rich</p>
+                    <p>Enterpreneur</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-client-msg">
+                <p>
+                  The href attribute requires a valid value to be accessible.
+                  Provide a valid, navigable address as the href value. If you
+                  cannot provide a valid href.
+                </p>
+              </div>
+              <div className="swiper-client-data row">
+                <div className="col-lg-6">
+                  <figure>
+                    <img src={ai} alt="client review"></img>
+                  </figure>
+                </div>
+                <div className="col-lg-6">
+                  <div className="clien-data-details">
+                    <p>Richie Rich</p>
+                    <p>Enterpreneur</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-client-msg">
+                <p>
+                  The href attribute requires a valid value to be accessible.
+                  Provide a valid, navigable address as the href value. If you
+                  cannot provide a valid href.
+                </p>
+              </div>
+              <div className="swiper-client-data row">
+                <div className="col-lg-6">
+                  <figure>
+                    <img src={ai} alt="client review"></img>
+                  </figure>
+                </div>
+                <div className="col-lg-6">
+                  <div className="clien-data-details">
+                    <p>Richie Rich</p>
+                    <p>Enterpreneur</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-client-msg">
+                <p>
+                  The href attribute requires a valid value to be accessible.
+                  Provide a valid, navigable address as the href value. If you
+                  cannot provide a valid href.
+                </p>
+              </div>
+              <div className="swiper-client-data row">
+                <div className="col-lg-6">
+                  <figure>
+                    <img src={ai} alt="client review"></img>
+                  </figure>
+                </div>
+                <div className="col-lg-6">
+                  <div className="clien-data-details">
+                    <p>Richie Rich</p>
+                    <p>Enterpreneur</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-client-msg">
+                <p>
+                  The href attribute requires a valid value to be accessible.
+                  Provide a valid, navigable address as the href value. If you
+                  cannot provide a valid href.
+                </p>
+              </div>
+              <div className="swiper-client-data row">
+                <div className="col-lg-6">
+                  <figure>
+                    <img src={ai} alt="client review"></img>
+                  </figure>
+                </div>
+                <div className="col-lg-6">
+                  <div className="clien-data-details">
+                    <p>Richie Rich</p>
+                    <p>Enterpreneur</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="swiper-client-msg">
+                <p>
+                  The href attribute requires a valid value to be accessible.
+                  Provide a valid, navigable address as the href value. If you
+                  cannot provide a valid href.
+                </p>
+              </div>
+              <div className="swiper-client-data row">
+                <div className="col-lg-6">
+                  <figure>
+                    <img src={ai} alt="client review"></img>
+                  </figure>
+                </div>
+                <div className="col-lg-6">
+                  <div className="clien-data-details">
+                    <p>Richie Rich</p>
+                    <p>Enterpreneur</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+
         {/* Testimonial section end */}
 
         {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
