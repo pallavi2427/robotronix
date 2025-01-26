@@ -375,17 +375,17 @@ const Slider = () => {
           {" "}
           <p className="content-para">What our clients say about us.</p>
         </div>
-        <div className="container">
+        <div className="container" style={{ width: "70%" }}>
           <Swiper
             slidesPerView={2}
-            spaceBetween={30}
+            spaceBetween={20}
             pagination={{
               clickable: true,
             }}
-            // autoplay={{
-            //   delay: 2500,
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
             modules={[Pagination, Autoplay]}
             className="mySwiper"
           >
@@ -491,7 +491,7 @@ const Slider = () => {
               <div className="swiper-client-data row">
                 <div className="col-lg-6">
                   <figure>
-                    <img src={ai} alt="client review"></img>
+                    <img src={client3} alt="client review"></img>
                   </figure>
                 </div>
                 <div className="col-lg-6">
@@ -513,7 +513,7 @@ const Slider = () => {
               <div className="swiper-client-data row">
                 <div className="col-lg-6">
                   <figure>
-                    <img src={ai} alt="client review"></img>
+                    <img src={client1} alt="client review"></img>
                   </figure>
                 </div>
                 <div className="col-lg-6">
@@ -535,7 +535,7 @@ const Slider = () => {
               <div className="swiper-client-data row">
                 <div className="col-lg-6">
                   <figure>
-                    <img src={ai} alt="client review"></img>
+                    <img src={client2} alt="client review"></img>
                   </figure>
                 </div>
                 <div className="col-lg-6">
@@ -557,7 +557,7 @@ const Slider = () => {
               <div className="swiper-client-data row">
                 <div className="col-lg-6">
                   <figure>
-                    <img src={ai} alt="client review"></img>
+                    <img src={client3} alt="client review"></img>
                   </figure>
                 </div>
                 <div className="col-lg-6">
@@ -579,7 +579,7 @@ const Slider = () => {
               <div className="swiper-client-data row">
                 <div className="col-lg-6">
                   <figure>
-                    <img src={ai} alt="client review"></img>
+                    <img src={client4} alt="client review"></img>
                   </figure>
                 </div>
                 <div className="col-lg-6">

@@ -587,8 +587,8 @@ swiper {
 }
 
 .swiper-client-msg {
-  margin: 3rem 2rem;
-  padding: 5rem 8rem;
+  margin: 1rem 1rem 1rem 1rem;
+  padding: 2rem 4rem;
   background: var(--background-color);
   border-radius: 1rem;
   text-align: left;
@@ -609,31 +609,41 @@ swiper {
   content: "\f10d";
   position: absolute;
   top: 0;
-  left: 2rem;
-  font-size: 5rem;
+  left: 1rem;
+  font-size: 2.5rem;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   color: #ced3ff;
+}
+.swiper-client-msg p{
+  font-size: 18px;
 }
 .swiper-client-msg p::after {
   content: "\f10e";
   position: absolute;
   bottom: 0;
-  right: 3rem;
-  font-size: 5rem;
+  right: 1rem;
+  font-size: 2.5rem;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   color: #ced3ff;
 }
 .swiper-client-data {
   align-items: center;
-  margin-top: 3.2rem;
+  margin-top: 2rem;
+}
+.swiper-client-data p{
+  font-size: 15px;
 }
 .swiper-slide img {
   max-width: 10rem;
-  height: 10rem;
+  height: 6rem;
   border-radius: 50%;
   border: 0.5rem solid #f3f4ff;
+}
+.container .mySwiper .swiper-pagination {
+  position: relative;
+  top:5px;
 }
 
 /* testimonial section on home page End */
