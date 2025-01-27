@@ -1739,6 +1739,37 @@ nav input {
 }
 
 /* Second Section */
+/* Third Section */
+
+.web-dev .third-section {
+  position: relative;
+  bottom: 130px;
+  background-image: url("./assets/img/white\ bg.jpg");
+  height: 500px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  padding-top: 40px;
+}
+
+.web-dev .third-section ul li button {
+  height: 60px;
+  font-weight: bold;
+  color: grey;
+  font-size: 20px;
+  border: 1px solid grey;
+  box-shadow:  0px 2px 12px rgba(0, 0, 0, 0.1) ;
+}
+
+.web-dev .third-section .tab-content h2 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.web-dev .third-section .tab-content p {
+  margin-top: 25px;
+}
+
+/*Third Section */
+
 
 /*IOS Dev Css */
 
