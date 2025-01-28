@@ -1,9 +1,12 @@
 import blueBgImg from "./../../assets/img/plain-blue-image.jpg";
 import ecommerceLogo from "./../../assets/img/ecommerce.png";
-import { useState,useEffect} from "react";
+import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const IosAppDev = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("home");
+  const [activeIndex, setActiveIndex] = useState(null);
 
   // Define the tab list
   const tabs = ["home", "profile", "contact", "new"];
@@ -26,6 +29,38 @@ const IosAppDev = () => {
     // Cleanup interval on component unmount
     return () => clearInterval(intervalId);
   }, [tabs]);
+
+  const blueShades = ["#001f3d", "#003c66", "#00559e", "#0074d9"];
+
+  const darkBlue = "#003c66"; // Define a specific dark blue color
+  const [currentColor, setCurrentColor] = useState(blueShades[0]);
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (!isHovered) {
+      const intervalId = setInterval(() => {
+        const randomColor =
+          blueShades[Math.floor(Math.random() * blueShades.length)];
+        setCurrentColor(randomColor);
+      }, 1000);
+
+      // Cleanup the interval on component unmount
+      return () => clearInterval(intervalId);
+    }
+  }, [isHovered]);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true); // Stop color change and set to dark blue on hover
+    setCurrentColor(darkBlue);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false); // Resume color changing when mouse leaves
+  };
+
+  const handleToggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
   const Data = [
     {
@@ -116,7 +151,7 @@ const IosAppDev = () => {
             <li
               className="nav-item"
               role="presentation"
-              style={{ width: "25%"}}
+              style={{ width: "25%" }}
             >
               <button
                 className="nav-link active w-100 btn-primary"
@@ -127,7 +162,6 @@ const IosAppDev = () => {
                 role="tab"
                 aria-controls="pills-home"
                 aria-selected="true"
-                
               >
                 Spark Business Value
               </button>
@@ -146,7 +180,6 @@ const IosAppDev = () => {
                 role="tab"
                 aria-controls="pills-profile"
                 aria-selected="false"
-                
               >
                 Foster Resilience
               </button>
@@ -165,7 +198,6 @@ const IosAppDev = () => {
                 role="tab"
                 aria-controls="pills-contact"
                 aria-selected="false"
-           
               >
                 Revolutionize and Motivate
               </button>
@@ -184,13 +216,20 @@ const IosAppDev = () => {
                 role="tab"
                 aria-controls="pills-new"
                 aria-selected="false"
-                
               >
                 Evolve and Flourish
               </button>
             </li>
           </ul>
-          <div className="tab-content" id="pills-tabContent" style={{padding:"10px 400px",position:"relative",bottom:"40px"}}>
+          <div
+            className="tab-content"
+            id="pills-tabContent"
+            style={{
+              padding: "10px 400px",
+              position: "relative",
+              bottom: "40px",
+            }}
+          >
             <div
               className="tab-pane fade show active"
               id="pills-home"
@@ -198,13 +237,13 @@ const IosAppDev = () => {
               aria-labelledby="pills-home-tab"
             >
               <div className="tab-content">
-              <h2>Spark Business Value</h2>
-              <p>
-                Leverage AI and ML technologies to fully unlock your business's
-                potential, driving exceptional value. We prioritize delivering
-                measurable outcomes that boost efficiency, increase
-                productivity, and enhance profitability.
-              </p>
+                <h2>Spark Business Value</h2>
+                <p>
+                  Leverage AI and ML technologies to fully unlock your
+                  business's potential, driving exceptional value. We prioritize
+                  delivering measurable outcomes that boost efficiency, increase
+                  productivity, and enhance profitability.
+                </p>
               </div>
             </div>
 
@@ -215,13 +254,13 @@ const IosAppDev = () => {
               aria-labelledby="pills-profile-tab"
             >
               <div className="tab-content">
-              <h2>Foster Resilience</h2>
-              <p>
-                Leverage AI and ML technologies to fully unlock your business's
-                potential, driving exceptional value. We prioritize delivering
-                measurable outcomes that boost efficiency, increase
-                productivity, and enhance profitability.
-              </p>
+                <h2>Foster Resilience</h2>
+                <p>
+                  Leverage AI and ML technologies to fully unlock your
+                  business's potential, driving exceptional value. We prioritize
+                  delivering measurable outcomes that boost efficiency, increase
+                  productivity, and enhance profitability.
+                </p>
               </div>
             </div>
             <div
@@ -230,14 +269,14 @@ const IosAppDev = () => {
               role="tabpanel"
               aria-labelledby="pills-contact-tab"
             >
-               <div className="tab-content">
-              <h2>Revolutionize and Motivate</h2>
-              <p>
-                Leverage AI and ML technologies to fully unlock your business's
-                potential, driving exceptional value. We prioritize delivering
-                measurable outcomes that boost efficiency, increase
-                productivity, and enhance profitability.
-              </p>
+              <div className="tab-content">
+                <h2>Revolutionize and Motivate</h2>
+                <p>
+                  Leverage AI and ML technologies to fully unlock your
+                  business's potential, driving exceptional value. We prioritize
+                  delivering measurable outcomes that boost efficiency, increase
+                  productivity, and enhance profitability.
+                </p>
               </div>
             </div>
             <div
@@ -246,20 +285,188 @@ const IosAppDev = () => {
               role="tabpanel"
               aria-labelledby="pills-new-tab"
             >
-               <div className="tab-content">
-              <h2>Evolve and Flourish</h2>
-              <p>
-                Leverage AI and ML technologies to fully unlock your business's
-                potential, driving exceptional value. We prioritize delivering
-                measurable outcomes that boost efficiency, increase
-                productivity, and enhance profitability.
-              </p>
+              <div className="tab-content">
+                <h2>Evolve and Flourish</h2>
+                <p>
+                  Leverage AI and ML technologies to fully unlock your
+                  business's potential, driving exceptional value. We prioritize
+                  delivering measurable outcomes that boost efficiency, increase
+                  productivity, and enhance profitability.
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="row fourth-section">
-          <h2>Reasons Why Our Clients Trust Us</h2>
+        <div className="container">
+          <div className="row fourth-section">
+            <h2>Reasons Why Our Clients Trust Us</h2>
+            <div className="client-reasons">
+              <div className="reason">
+                <h3>Industry Recognition</h3>
+                <p>
+                  Recognized as the best software development company, and top
+                  web developer for the automotive, financial, and e-commerce
+                  industry by Designrush, Clutch, MSME Government of India.
+                </p>
+              </div>
+              <div className="reason">
+                <h3>Industry Recognition</h3>
+                <p>
+                  Recognized as the best software development company, and top
+                  web developer for the automotive, financial, and e-commerce
+                  industry by Designrush, Clutch, MSME Government of India.
+                </p>
+              </div>
+              <div className="reason">
+                <h3>Industry Recognition</h3>
+                <p>
+                  Recognized as the best software development company, and top
+                  web developer for the automotive, financial, and e-commerce
+                  industry by Designrush, Clutch, MSME Government of India.
+                </p>
+              </div>
+              <div className="reason">
+                <h3>Industry Recognition</h3>
+                <p>
+                  Recognized as the best software development company, and top
+                  web developer for the automotive, financial, and e-commerce
+                  industry by Designrush, Clutch, MSME Government of India.
+                </p>
+              </div>
+            </div>
+            <button
+              style={{
+                backgroundColor: currentColor,
+                color: "#fff",
+                padding: "10px 20px",
+                border: "none",
+                borderRadius: "10px",
+                transition: "background-color 1.2s ease",
+                fontWeight: "bold",
+                width: "30%",
+                marginLeft: "35%",
+                marginTop: "10px",
+                height: "50px",
+                fontSize: "20px",
+              }}
+              onMouseEnter={handleMouseEnter} // Stop color change on hover
+              onMouseLeave={handleMouseLeave} // Resume color change when mouse leaves
+              onClick={() => navigate("/contact-us")}
+            >
+              Talk To Our Expert
+            </button>
+          </div>
+          <div className="container">
+            <div className="row fifth-section">
+              <h2 id="faq-heading">FAQ's</h2>
+              <div className="accordion">
+                {/* Accordion Item 1 */}
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className={`accordion-button ${
+                        activeIndex === 0 ? "active" : ""
+                      }`}
+                      onClick={() => handleToggle(0)}
+                      style={{color:"#2d465e"}}
+                    >
+                      Accordion Item #1
+                      <span
+                        className={`arrow ${activeIndex === 0 ? "down" : "up"}`}
+                      >
+                        ▼
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    className={`accordion-body ${
+                      activeIndex === 0 ? "show" : ""
+                    }`}
+                  >
+                    <strong>This is the first item's accordion body.</strong> It
+                    is shown by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+
+                {/* Accordion Item 2 */}
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className={`accordion-button ${
+                        activeIndex === 1 ? "active" : ""
+                      }`}
+                      onClick={() => handleToggle(1)}
+                      style={{color:"#2d465e"}}
+                    >
+                      Accordion Item #2
+                      <span
+                        className={`arrow ${activeIndex === 1 ? "down" : "up"}`}
+                      >
+                        ▼
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    className={`accordion-body ${
+                      activeIndex === 1 ? "show" : ""
+                    }`}
+                  >
+                    <strong>This is the second item's accordion body.</strong>{" "}
+                    It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+
+                {/* Accordion Item 3 */}
+                <div className="accordion-item">
+                  <h2 className="accordion-header">
+                    <button
+                      className={`accordion-button ${
+                        activeIndex === 2 ? "active" : ""
+                      }`}
+                      onClick={() => handleToggle(2)}
+                      style={{color:"#2d465e"}}
+                    >
+                      Accordion Item #3
+                      <span
+                        className={`arrow ${activeIndex === 2 ? "down" : "up"}`}
+                      >
+                        ▼
+                      </span>
+                    </button>
+                  </h2>
+                  <div
+                    className={`accordion-body ${
+                      activeIndex === 2 ? "show" : ""
+                    }`}
+                  >
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </>
