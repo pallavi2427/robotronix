@@ -172,7 +172,7 @@ const IosAppDev = () => {
               style={{ width: "25%" }}
             >
               <button
-                className="nav-link w-100 btn-secondary"
+                className="nav-link w-100 btn-primary"
                 id="pills-profile-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-profile"
@@ -190,7 +190,7 @@ const IosAppDev = () => {
               style={{ width: "25%" }}
             >
               <button
-                className="nav-link w-100 btn-success"
+                className="nav-link w-100 btn-primary"
                 id="pills-contact-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-contact"
@@ -208,7 +208,7 @@ const IosAppDev = () => {
               style={{ width: "25%" }}
             >
               <button
-                className="nav-link w-100 btn-success"
+                className="nav-link w-100 btn-primary"
                 id="pills-new-tab"
                 data-bs-toggle="pill"
                 data-bs-target="#pills-new"
