@@ -40,15 +40,15 @@ const Slider = () => {
       title: "Technical Support",
       content: (
         <>
-          <div className="row">
-            <div className="col-lg-6 mt-2">
+          <div className='row'>
+            <div className='col-lg-6 mt-2'>
               <img
                 src={technical}
-                alt="Technical Support"
+                alt='Technical Support'
                 style={{ width: "100%", height: "180px" }}
               />
             </div>
-            <div className="col-lg-6">
+            <div className='col-lg-6'>
               <p style={{ fontWeight: "600" }}>
                 <ul>
                   <li>
@@ -71,15 +71,15 @@ const Slider = () => {
       title: "Consultation Services",
       content: (
         <>
-          <div className="row">
-            <div className="col-lg-6 mt-2">
+          <div className='row'>
+            <div className='col-lg-6 mt-2'>
               <img
                 src={consult}
-                alt="Consultation Services"
+                alt='Consultation Services'
                 style={{ width: "100%", height: "180px" }}
               />
             </div>
-            <div className="col-lg-6">
+            <div className='col-lg-6'>
               <p></p>
               <p style={{ fontWeight: "600" }}>
                 <ul>
@@ -100,15 +100,15 @@ const Slider = () => {
       title: "Product Information",
       content: (
         <>
-          <div className="row">
-            <div className="col-lg-6 mt-2">
+          <div className='row'>
+            <div className='col-lg-6 mt-2'>
               <img
                 src={service}
-                alt="Product or Service Information"
+                alt='Product or Service Information'
                 style={{ width: "100%", height: "180px" }}
               />
             </div>
-            <div className="col-lg-6">
+            <div className='col-lg-6'>
               <p style={{ fontWeight: "600" }}>
                 <ul>
                   <li>
@@ -128,15 +128,15 @@ const Slider = () => {
       title: "Cybersecurity",
       content: (
         <>
-          <div className="row">
-            <div className="col-lg-6 mt-2">
+          <div className='row'>
+            <div className='col-lg-6 mt-2'>
               <img
                 src={cyber}
-                alt="Cybersecurity"
+                alt='Cybersecurity'
                 style={{ width: "100%", height: "180px" }}
               />
             </div>
-            <div className="col-lg-6">
+            <div className='col-lg-6'>
               <p style={{ fontWeight: "600" }}>
                 <ul>
                   <li>Guidance on securing your systems and data.</li>
@@ -154,15 +154,15 @@ const Slider = () => {
       title: "Data and Analytics",
       content: (
         <>
-          <div className="row">
-            <div className="col-lg-6 mt-2">
+          <div className='row'>
+            <div className='col-lg-6 mt-2'>
               <img
                 src={dataAnalysis}
-                alt="Data and Analytics"
+                alt='Data and Analytics'
                 style={{ width: "100%", height: "180px" }}
               />
             </div>
-            <div className="col-lg-6">
+            <div className='col-lg-6'>
               <p style={{ fontWeight: "600" }}>
                 <ul>
                   <li>Assistance in setting up data analytics platforms.</li>
@@ -207,87 +207,94 @@ const Slider = () => {
       hoverTextColor: "#242424",
     },
   ];
+  const faqs = [
+    {
+      header: "What is React?",
+      text: "React is a JavaScript library for building user interfaces.",
+    },
+    {
+      header: "What is Bootstrap?",
+      text: "Bootstrap is a CSS framework for designing responsive websites.",
+    },
+    {
+      header: "How does JSX work?",
+      text: "JSX is a syntax extension for JavaScript that looks similar to HTML.",
+    },
+  ];
 
   return (
     <>
       {/* Slider Section Start */}
-      <main className="main">
+      <main className='main'>
         <div
-          id="carouselExampleInterval"
-          className="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-inner">
+          id='carouselExampleInterval'
+          className='carousel slide'
+          data-bs-ride='carousel'>
+          <div className='carousel-inner'>
             <div
-              className="carousel-item active slider_one"
-              data-bs-interval="2000"
-            >
-              <img src={slider_1} alt="slider 1" className="" />
+              className='carousel-item active slider_one'
+              data-bs-interval='2000'>
+              <img src={slider_1} alt='slider 1' className='' />
             </div>
-            <div className="carousel-item slider_one" data-bs-interval="2000">
-              <img src={slider_2} alt="slider 2" className="" />
+            <div className='carousel-item slider_one' data-bs-interval='2000'>
+              <img src={slider_2} alt='slider 2' className='' />
             </div>
           </div>
           <button
-            className="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleInterval"
-            data-bs-slide="prev"
-          >
+            className='carousel-control-prev'
+            type='button'
+            data-bs-target='#carouselExampleInterval'
+            data-bs-slide='prev'>
             <span
-              className="carousel-control-prev-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Previous</span>
+              className='carousel-control-prev-icon'
+              aria-hidden='true'></span>
+            <span className='visually-hidden'>Previous</span>
           </button>
           <button
-            className="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleInterval"
-            data-bs-slide="next"
-          >
+            className='carousel-control-next'
+            type='button'
+            data-bs-target='#carouselExampleInterval'
+            data-bs-slide='next'>
             <span
-              className="carousel-control-next-icon"
-              aria-hidden="true"
-            ></span>
-            <span className="visually-hidden">Next</span>
+              className='carousel-control-next-icon'
+              aria-hidden='true'></span>
+            <span className='visually-hidden'>Next</span>
           </button>
         </div>
         {/* /Slider Section End */}
         {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
         {/* card start */}
-        <div className="container">
-          <div className="d-flex justify-content-center align-item-center">
-            <h2 className="opacity-50 content-subtitle">What We Do</h2>
+        <div className='container'>
+          <div className='d-flex justify-content-center align-item-center'>
+            <h2 className='opacity-50 content-subtitle'>What We Do</h2>
           </div>
-          <div className="d-flex justify-content-center align-item-center">
-            <p className="content-para">
+          <div className='d-flex justify-content-center align-item-center'>
+            <p className='content-para'>
               We create innovative solutions to transform your workplace.
             </p>
           </div>
-          <div className="row">
+          <div className='row'>
             {contentData.map((item, index) => (
-              <div className="col-lg-4" key={index}>
+              <div className='col-lg-4' key={index}>
                 <NavLink to={item.link}>
                   <div
-                    className="file-container"
+                    className='file-container'
                     data-border-color={item.borderColor}
-                    data-hover-text-color={item.hoverTextColor}
-                  >
-                    <div className="inner-container">
-                      <div className="image-container">
+                    data-hover-text-color={item.hoverTextColor}>
+                    <div className='inner-container'>
+                      <div className='image-container'>
                         <img
                           src={item.image}
                           alt={item.title}
-                          className="file-image"
+                          className='file-image'
                         />
                       </div>
-                      <div className="content">
-                        <h1 className="text">
-                          <span className="title">{item.title}</span>
-                          <span className="text-effect" />
+                      <div className='content'>
+                        <h1 className='text'>
+                          <span className='title'>{item.title}</span>
+                          <span className='text-effect' />
                         </h1>
-                        <p className="description">{item.description}</p>
+                        <p className='description'>{item.description}</p>
                       </div>
                     </div>
                   </div>
@@ -299,28 +306,27 @@ const Slider = () => {
         {/* card End */}
         {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
         {/* How we can help you Section start */}
-        <div className="d-flex justify-content-center align-item-center">
+        <div className='d-flex justify-content-center align-item-center'>
           {" "}
-          <h2 className="opacity-50 content-subtitle">How we can help you?</h2>
+          <h2 className='opacity-50 content-subtitle'>How we can help you?</h2>
         </div>
-        <div className="d-flex justify-content-center align-item-center">
+        <div className='d-flex justify-content-center align-item-center'>
           {" "}
-          <p className="content-para">
+          <p className='content-para'>
             We provide innovative solutions to help you build a truly digital
             workplace.
           </p>
         </div>
-        <div className="about section">
-          <div id="about" className="about">
-            <div className="content">
-              <div className="container-fluid">
-                <div className="row">
-                  <div className="col-lg-12 mb-4 mb-lg-0">
-                    <div className="cycle-tab-container">
+        <div className='about section'>
+          <div id='about' className='about'>
+            <div className='content'>
+              <div className='container-fluid'>
+                <div className='row'>
+                  <div className='col-lg-12 mb-4 mb-lg-0'>
+                    <div className='cycle-tab-container'>
                       <ul
-                        className="nav nav-tabs justify-content-center flex-column flex-sm-row"
-                        role="tablist"
-                      >
+                        className='nav nav-tabs justify-content-center flex-column flex-sm-row'
+                        role='tablist'>
                         {tabs.map((tab, index) => (
                           <li
                             key={index}
@@ -328,28 +334,25 @@ const Slider = () => {
                               activeTab === index ? "active" : ""
                             }`}
                             onClick={() => handleTabClick(index)}
-                            role="tab"
-                            aria-selected={activeTab === index}
-                          >
+                            role='tab'
+                            aria-selected={activeTab === index}>
                             <a
-                              href="#!"
-                              className="nav-link border-none"
-                              onClick={(e) => e.preventDefault()}
-                            >
+                              href='#!'
+                              className='nav-link border-none'
+                              onClick={(e) => e.preventDefault()}>
                               {tab.title}
                             </a>
                           </li>
                         ))}
                       </ul>
-                      <div className="tab-content">
+                      <div className='tab-content'>
                         {tabs.map((tabContent, index) => (
                           <div
                             key={index}
                             className={`tab-pane fade ${
                               activeTab === index ? "show active" : ""
-                            }`}
-                          >
-                            <div className="tab-content-inner">
+                            }`}>
+                            <div className='tab-content-inner'>
                               <h4>{tabContent.title}</h4>
                               {tabContent.content}
                             </div>
@@ -367,225 +370,279 @@ const Slider = () => {
         {/*How we can help you Section end */}
         {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
         {/* Testimonial section start */}
-        <div className="d-flex justify-content-center align-item-center">
+        <div className='d-flex justify-content-center align-item-center'>
           {" "}
-          <h2 className="opacity-50 content-subtitle">Testimonial</h2>
+          <h2 className='opacity-50 content-subtitle'>Testimonial</h2>
         </div>
-        <div className="d-flex justify-content-center align-item-center">
+        <div className='d-flex justify-content-center align-item-center'>
           {" "}
-          <p className="content-para">What our clients say about us.</p>
+          <p className='content-para'>What our clients say about us.</p>
         </div>
-        <div className="container" style={{ width: "70%" }}>
+        <div className='container' style={{ width: "70%" }}>
           <Swiper
             slidesPerView={2}
             spaceBetween={20}
             pagination={{
               clickable: true,
             }}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
+            // autoplay={{
+            //   delay: 2500,
+            //   disableOnInteraction: false,
+            // }}
             modules={[Pagination, Autoplay]}
-            className="mySwiper"
-          >
+            className='mySwiper'>
             <SwiperSlide>
               {/* section start */}
 
-              <div className="swiper-client-msg">
+              <div className='swiper-client-msg'>
+                <div className='swiper-client-logo'>
+                  <img src={logoSlider2} alt='' />
+                </div>
                 <p>
                   The href attribute requires a valid value to be accessible.
                   Provide a valid, navigable address as the href value. If you
                   cannot provide a valid href.
                 </p>
-              </div>
-              <div className="swiper-client-data row">
-                <div className="col-lg-6">
-                  <figure>
-                    <img src={client1} alt="client review"></img>
-                  </figure>
-                </div>
-                <div className="col-lg-6">
-                  <div className="clien-data-details">
-                    <p>Richie Rich</p>
-                    <p>Enterpreneur</p>
+                <div className='row'>
+                  <div className='col-lg-3 pt-2'>
+                    <figure>
+                      <img
+                        src={client1}
+                        alt='client review'
+                        style={{ width: "4rem", borderRadius: "2rem" }}></img>
+                    </figure>
+                  </div>
+                  <div className='col-lg-9'>
+                    <div className='clien-data-details'>
+                      <h6>Richie Rich</h6>
+                      <h6>Enterpreneur</h6>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             {/* section end */}
+
             <SwiperSlide>
-              <div className="swiper-client-msg">
+              <div className='swiper-client-msg'>
+                <div className='swiper-client-logo'>
+                  <img src={logoSlider7} alt='' />
+                </div>
                 <p>
                   The href attribute requires a valid value to be accessible.
                   Provide a valid, navigable address as the href value. If you
                   cannot provide a valid href.
                 </p>
-              </div>
-              <div className="swiper-client-data row">
-                <div className="col-lg-6">
-                  <figure>
-                    <img src={client2} alt="client review"></img>
-                  </figure>
-                </div>
-                <div className="col-lg-6">
-                  <div className="clien-data-details">
-                    <p>Richie Rich</p>
-                    <p>Enterpreneur</p>
+                <div className='row'>
+                  <div className='col-lg-3 pt-2'>
+                    <figure>
+                      <img
+                        src={client2}
+                        alt='client review'
+                        style={{ width: "4rem", borderRadius: "2rem" }}></img>
+                    </figure>
+                  </div>
+                  <div className='col-lg-9'>
+                    <div className='clien-data-details'>
+                      <h6>Richie Rich</h6>
+                      <h6>Enterpreneur</h6>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper-client-msg">
+              <div className='swiper-client-msg'>
+                <div className='swiper-client-logo'>
+                  <img src={logoSlider2} alt='' />
+                </div>
                 <p>
                   The href attribute requires a valid value to be accessible.
                   Provide a valid, navigable address as the href value. If you
                   cannot provide a valid href.
                 </p>
-              </div>
-              <div className="swiper-client-data row">
-                <div className="col-lg-6">
-                  <figure>
-                    <img src={client3} alt="client review"></img>
-                  </figure>
-                </div>
-                <div className="col-lg-6">
-                  <div className="clien-data-details">
-                    <p>Richie Rich</p>
-                    <p>Enterpreneur</p>
+                <div className='row'>
+                  <div className='col-lg-3 pt-2'>
+                    <figure>
+                      <img
+                        src={client3}
+                        alt='client review'
+                        style={{ width: "4rem", borderRadius: "2rem" }}></img>
+                    </figure>
+                  </div>
+                  <div className='col-lg-9'>
+                    <div className='clien-data-details'>
+                      <h6>Richie Rich</h6>
+                      <h6>Enterpreneur</h6>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper-client-msg">
+              <div className='swiper-client-msg'>
+                <div className='swiper-client-logo'>
+                  <img src={logoSlider3} alt='' />
+                </div>
                 <p>
                   The href attribute requires a valid value to be accessible.
                   Provide a valid, navigable address as the href value. If you
                   cannot provide a valid href.
                 </p>
-              </div>
-              <div className="swiper-client-data row">
-                <div className="col-lg-6">
-                  <figure>
-                    <img src={client4} alt="client review"></img>
-                  </figure>
-                </div>
-                <div className="col-lg-6">
-                  <div className="clien-data-details">
-                    <p>Richie Rich</p>
-                    <p>Enterpreneur</p>
+                <div className='row'>
+                  <div className='col-lg-3 pt-2'>
+                    <figure>
+                      <img
+                        src={client1}
+                        alt='client review'
+                        style={{ width: "4rem", borderRadius: "2rem" }}></img>
+                    </figure>
+                  </div>
+                  <div className='col-lg-9'>
+                    <div className='clien-data-details'>
+                      <h6>Richie Rich</h6>
+                      <h6>Enterpreneur</h6>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper-client-msg">
+              <div className='swiper-client-msg'>
+                <div className='swiper-client-logo'>
+                  <img src={logoSlider4} alt='' />
+                </div>
                 <p>
                   The href attribute requires a valid value to be accessible.
                   Provide a valid, navigable address as the href value. If you
                   cannot provide a valid href.
                 </p>
-              </div>
-              <div className="swiper-client-data row">
-                <div className="col-lg-6">
-                  <figure>
-                    <img src={client3} alt="client review"></img>
-                  </figure>
-                </div>
-                <div className="col-lg-6">
-                  <div className="clien-data-details">
-                    <p>Richie Rich</p>
-                    <p>Enterpreneur</p>
+                <div className='row'>
+                  <div className='col-lg-3 pt-2'>
+                    <figure>
+                      <img
+                        src={client1}
+                        alt='client review'
+                        style={{ width: "4rem", borderRadius: "2rem" }}></img>
+                    </figure>
+                  </div>
+                  <div className='col-lg-9'>
+                    <div className='clien-data-details'>
+                      <h6>Richie Rich</h6>
+                      <h6>Enterpreneur</h6>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper-client-msg">
+              <div className='swiper-client-msg'>
+                <div className='swiper-client-logo'>
+                  <img src={logoSlider5} alt='' />
+                </div>
                 <p>
                   The href attribute requires a valid value to be accessible.
                   Provide a valid, navigable address as the href value. If you
                   cannot provide a valid href.
                 </p>
-              </div>
-              <div className="swiper-client-data row">
-                <div className="col-lg-6">
-                  <figure>
-                    <img src={client1} alt="client review"></img>
-                  </figure>
-                </div>
-                <div className="col-lg-6">
-                  <div className="clien-data-details">
-                    <p>Richie Rich</p>
-                    <p>Enterpreneur</p>
+                <div className='row'>
+                  <div className='col-lg-3 pt-2'>
+                    <figure>
+                      <img
+                        src={client1}
+                        alt='client review'
+                        style={{ width: "4rem", borderRadius: "2rem" }}></img>
+                    </figure>
+                  </div>
+                  <div className='col-lg-9'>
+                    <div className='clien-data-details'>
+                      <h6>Richie Rich</h6>
+                      <h6>Enterpreneur</h6>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper-client-msg">
+              <div className='swiper-client-msg'>
+                <div className='swiper-client-logo'>
+                  <img src={logoSlider6} alt='' />
+                </div>
                 <p>
                   The href attribute requires a valid value to be accessible.
                   Provide a valid, navigable address as the href value. If you
                   cannot provide a valid href.
                 </p>
-              </div>
-              <div className="swiper-client-data row">
-                <div className="col-lg-6">
-                  <figure>
-                    <img src={client2} alt="client review"></img>
-                  </figure>
-                </div>
-                <div className="col-lg-6">
-                  <div className="clien-data-details">
-                    <p>Richie Rich</p>
-                    <p>Enterpreneur</p>
+                <div className='row'>
+                  <div className='col-lg-3 pt-2'>
+                    <figure>
+                      <img
+                        src={client1}
+                        alt='client review'
+                        style={{ width: "4rem", borderRadius: "2rem" }}></img>
+                    </figure>
+                  </div>
+                  <div className='col-lg-9'>
+                    <div className='clien-data-details'>
+                      <h6>Richie Rich</h6>
+                      <h6>Enterpreneur</h6>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper-client-msg">
+              <div className='swiper-client-msg'>
+                <div className='swiper-client-logo'>
+                  <img src={logoSlider7} alt='' />
+                </div>
                 <p>
                   The href attribute requires a valid value to be accessible.
                   Provide a valid, navigable address as the href value. If you
                   cannot provide a valid href.
                 </p>
-              </div>
-              <div className="swiper-client-data row">
-                <div className="col-lg-6">
-                  <figure>
-                    <img src={client3} alt="client review"></img>
-                  </figure>
-                </div>
-                <div className="col-lg-6">
-                  <div className="clien-data-details">
-                    <p>Richie Rich</p>
-                    <p>Enterpreneur</p>
+                <div className='row'>
+                  <div className='col-lg-3 pt-2'>
+                    <figure>
+                      <img
+                        src={client1}
+                        alt='client review'
+                        style={{ width: "4rem", borderRadius: "2rem" }}></img>
+                    </figure>
+                  </div>
+                  <div className='col-lg-9'>
+                    <div className='clien-data-details'>
+                      <h6>Richie Rich</h6>
+                      <h6>Enterpreneur</h6>
+                    </div>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
             <SwiperSlide>
-              <div className="swiper-client-msg">
+              <div className='swiper-client-msg'>
+                <div className='swiper-client-logo'>
+                  <img src={logoSlider} alt='' />
+                </div>
                 <p>
                   The href attribute requires a valid value to be accessible.
                   Provide a valid, navigable address as the href value. If you
                   cannot provide a valid href.
                 </p>
-              </div>
-              <div className="swiper-client-data row">
-                <div className="col-lg-6">
-                  <figure>
-                    <img src={client4} alt="client review"></img>
-                  </figure>
-                </div>
-                <div className="col-lg-6">
-                  <div className="clien-data-details">
-                    <p>Richie Rich</p>
-                    <p>Enterpreneur</p>
+                <div className='row'>
+                  <div className='col-lg-3 pt-2'>
+                    <figure>
+                      <img
+                        src={client1}
+                        alt='client review'
+                        style={{ width: "4rem", borderRadius: "2rem" }}></img>
+                    </figure>
+                  </div>
+                  <div className='col-lg-9'>
+                    <div className='clien-data-details'>
+                      <h6>Richie Rich</h6>
+                      <h6>Enterpreneur</h6>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -597,135 +654,183 @@ const Slider = () => {
 
         {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
 
+        {/* Industris we serve section start */}
+        <div className='d-flex justify-content-center align-item-center'>
+          {" "}
+          <h2 className='opacity-50 content-subtitle'>
+            Comprehensive Mobile App Development Solutions for Every Industry
+          </h2>
+        </div>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-6 indusries-img'>
+              <img src={ai} alt='' />
+            </div>
+            <div className='col-lg-6'>
+              <div
+                className='accordion accordion-flush'
+                id='accordionFlushExample'>
+                {faqs.map((data, index) => (
+                  <div className='accordion-item' key={index}>
+                    <h2
+                      className='accordion-header'
+                      id={`flush-heading-${index}`}>
+                      <button
+                        className='accordion-button collapsed'
+                        type='button'
+                        data-bs-toggle='collapse'
+                        data-bs-target={`#flush-collapse-${index}`}
+                        aria-expanded='false'
+                        aria-controls={`flush-collapse-${index}`}>
+                        {data.header}
+                      </button>
+                    </h2>
+                    <div
+                      id={`flush-collapse-${index}`}
+                      className='accordion-collapse collapse'
+                      aria-labelledby={`flush-heading-${index}`}
+                      data-bs-parent='#accordionFlushExample'>
+                      <div className='accordion-body'>{data.text}</div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Industris we serve section end */}
+
+        {/* ->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */}
+
         {/* Logo section start*/}
-        <div className="d-flex justify-content-center align-item-center">
+        <div className='d-flex justify-content-center align-item-center'>
           {" "}
-          <h2 className="opacity-50 content-subtitle">Our Clients</h2>
+          <h2 className='opacity-50 content-subtitle'>Our Clients</h2>
         </div>
-        <div className="d-flex justify-content-center align-item-center">
+        <div className='d-flex justify-content-center align-item-center'>
           {" "}
-          <p className="content-para">Trusted by clients nationwide.</p>
+          <p className='content-para'>Trusted by clients nationwide.</p>
         </div>
-        <section className="logo-section">
+        <section className='logo-section'>
           <div
-            className="container-fluid section-title"
-            data-aos="fade-up"
-          ></div>
+            className='container-fluid section-title'
+            data-aos='fade-up'></div>
 
-          <div className="container-fluid">
-            <div className="row g-0">
-              <div className="slider">
-                <div className="slide-track">
-                  <div className="slide">
-                    <img src={logoSlider} alt="" />
+          <div className='container-fluid'>
+            <div className='row g-0'>
+              <div className='slider'>
+                <div className='slide-track'>
+                  <div className='slide'>
+                    <img src={logoSlider} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider2} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider2} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider3} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider3} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider4} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider4} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider5} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider5} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider6} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider6} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider7} alt="" />
-                  </div>
-
-                  <div className="slide">
-                    <img src={logoSlider} alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src={logoSlider2} alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src={logoSlider3} alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src={logoSlider4} alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src={logoSlider5} alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src={logoSlider6} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider7} alt='' />
                   </div>
 
-                  <div className="slide">
-                    <img src={logoSlider7} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider} alt='' />
+                  </div>
+                  <div className='slide'>
+                    <img src={logoSlider2} alt='' />
+                  </div>
+                  <div className='slide'>
+                    <img src={logoSlider3} alt='' />
+                  </div>
+                  <div className='slide'>
+                    <img src={logoSlider4} alt='' />
+                  </div>
+                  <div className='slide'>
+                    <img src={logoSlider5} alt='' />
+                  </div>
+                  <div className='slide'>
+                    <img src={logoSlider6} alt='' />
                   </div>
 
-                  <div className="slide">
-                    <img src={logoSlider} alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src={logoSlider2} alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src={logoSlider3} alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src={logoSlider4} alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src={logoSlider5} alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src={logoSlider6} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider7} alt='' />
                   </div>
 
-                  <div className="slide">
-                    <img src={logoSlider7} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider2} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider2} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider3} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider3} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider4} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider4} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider5} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider5} alt="" />
-                  </div>
-                  <div className="slide">
-                    <img src={logoSlider6} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider6} alt='' />
                   </div>
 
-                  <div className="slide">
-                    <img src={logoSlider7} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider7} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider2} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider2} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider3} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider3} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider4} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider4} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider5} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider5} alt='' />
                   </div>
-                  <div className="slide">
-                    <img src={logoSlider6} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider6} alt='' />
                   </div>
 
-                  <div className="slide">
-                    <img src={logoSlider7} alt="" />
+                  <div className='slide'>
+                    <img src={logoSlider7} alt='' />
+                  </div>
+                  <div className='slide'>
+                    <img src={logoSlider} alt='' />
+                  </div>
+                  <div className='slide'>
+                    <img src={logoSlider2} alt='' />
+                  </div>
+                  <div className='slide'>
+                    <img src={logoSlider3} alt='' />
+                  </div>
+                  <div className='slide'>
+                    <img src={logoSlider4} alt='' />
+                  </div>
+                  <div className='slide'>
+                    <img src={logoSlider5} alt='' />
+                  </div>
+                  <div className='slide'>
+                    <img src={logoSlider6} alt='' />
+                  </div>
+
+                  <div className='slide'>
+                    <img src={logoSlider7} alt='' />
                   </div>
                 </div>
               </div>
